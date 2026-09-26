@@ -4,18 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GHOSTNAME WORLDWIDE — Premium Streetwear</title>
-<link rel="icon" type="image/svg+xml" href="/assets/logo-monogram.svg">
+<link rel="icon" type="image/svg+xml" href="assets/logo-monogram.svg">
+<link rel="canonical" href="https://ghostnameworldwide.com/">
 
 <!-- ===== SEO / SOCIAL (JSON-LD + Open Graph + Twitter) ===== -->
 <meta name="description" content="GHOSTNAME WORLDWIDE — premium anonymous streetwear. Faceless. Fearless. Forever. FW26 inaugural drop, limited runs, est. 2026.">
 <meta property="og:title" content="GHOSTNAME WORLDWIDE — Premium Streetwear">
 <meta property="og:description" content="Faceless. Fearless. Forever. Premium anonymous streetwear. FW26 inaugural drop. Est. 2026.">
-<meta property="og:image" content="/assets/og-image.svg">
+<meta property="og:image" content="https://ghostnameworldwide.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GHOSTNAME WORLDWIDE — Faceless. Fearless. Forever. FW26 inaugural drop.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GHOSTNAME WORLDWIDE">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://ghostnameworldwide.com/">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GHOSTNAME WORLDWIDE — Premium Streetwear">
 <meta name="twitter:description" content="Faceless. Fearless. Forever. FW26 inaugural drop.">
+<meta name="twitter:image" content="https://ghostnameworldwide.com/assets/og-image.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,10 +35,27 @@
 }
 </script>
 
-<!-- ===== Typography: Plus Jakarta Sans (body) + Syne (headings) ===== -->
+<!-- ===== Performance: preload the hero art before CSS discovers it ===== -->
+<link rel="preload" as="image" type="image/webp" fetchpriority="high" href="assets/images/hero_streetwear_fw26_1790379228007.webp">
+
+<!-- ===== Typography: Plus Jakarta Sans (body) + Syne (headings) — non-blocking ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+</noscript>
+
+<!-- ===== Snipcart — real hosted checkout (cart, payments, order capture).
+     Set your public API key below (Test key for sandbox, Live key to sell). ===== -->
+<script>
+window.SnipcartSettings = {
+    publicApiKey: "SET_YOUR_SNIPCART_PUBLIC_KEY",
+    loadStrategy: "on-user-interaction",
+    currency: "usd"
+};
+(function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState=="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy=="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+</script>
 
 <style>
     :root {
@@ -131,7 +154,7 @@
         justify-content: center; align-items: center;
         text-align: center; position: relative;
         background: linear-gradient(180deg, rgba(9,9,11,0.65) 0%, rgba(9,9,11,0.88) 100%),
-                    url('/src/assets/images/hero_streetwear_fw26_1790379228007.jpg') center/cover no-repeat;
+                    url('assets/images/hero_streetwear_fw26_1790379228007.webp') center/cover no-repeat;
         overflow: hidden;
     }
     .hero-content { position: relative; z-index: 2; max-width: 860px; padding: 0 24px; }
@@ -508,6 +531,8 @@
         text-transform: uppercase; cursor: pointer; transition: color 0.2s;
     }
     .foot-legal-btn:hover { color: #fff; }
+    a.foot-legal-btn { text-decoration: none; display: inline-block; }
+    .cart-note { color: var(--muted); font-size: 0.62rem; letter-spacing: 1px; text-transform: uppercase; margin: 12px 0 0; text-align: center; }
     .foot-bottom-right { display: flex; align-items: center; gap: 18px; }
 
     /* Modal dialog for Concierge & Legal info */
@@ -718,6 +743,23 @@
     }
     .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
+    /* ===== Nav readability fallback: if the hero has mid-tone areas under
+       the difference-blend nav, switch to a solid frosted bar instead ===== */
+    .nav-fallback-pill { display: none; }
+    body.nav-fallback nav { mix-blend-mode: normal; }
+    body.nav-fallback .nav-fallback-pill {
+        display: block;
+        position: absolute; inset: 0; z-index: -1;
+        background: rgba(9,9,11,0.82);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+    }
+
+    /* ===== Local cart fallback: shown only until a Snipcart public key is
+       configured (see SET_YOUR_SNIPCART_PUBLIC_KEY in this file). With a key
+       set, the cart + checkout live in Snipcart's hosted widget instead. ===== */
+    body:not(.snipcart-unconfigured) .cart-drawer { display: none; }
+
     /* ===== Responsive ===== */
     @media (max-width: 860px) {
         nav { padding: 18px 24px; }
@@ -757,12 +799,13 @@
     }
 </style>
 </head>
-<body>
+<body class="snipcart-unconfigured nav-fallback">
 
 <a class="skip-link" href="#main">Skip to content</a>
 <div id="progressBar" aria-hidden="true"></div>
 
 <nav aria-label="Main navigation">
+    <span class="nav-fallback-pill" aria-hidden="true"></span>
     <button class="logo" onclick="openSearch()" aria-label="GHOSTNAME — open search">GHOSTNAME®</button>
     <ul class="nav-links" id="navLinks">
         <li><a href="#shop">Shop</a></li>
@@ -772,7 +815,7 @@
     </ul>
     <div class="nav-tools">
         <button class="icon-btn search-label" onclick="openSearch()" aria-label="Search products">Search</button>
-        <select class="currency-select" id="currencySelect" onchange="setCurrency(this.value)" aria-label="Currency" title="Currency (demo rates)">
+        <select class="currency-select" id="currencySelect" onchange="setCurrency(this.value)" aria-label="Currency" title="Currency — display prices and Snipcart charge currency">
             <option value="USD">USD $</option>
             <option value="EUR">EUR €</option>
             <option value="GBP">GBP £</option>
@@ -828,7 +871,7 @@
         <p>GHOSTNAME WORLDWIDE is built for those who move in silence. Every garment is crafted from 500 GSM French terry cotton or high-density technical twill, dyed in small Japanese batch baths, and cut with exaggerated drop-shoulders. No overt logos, no disposable trends — pure structural weight.</p>
         <a href="#collection">Explore Selected Works →</a>
     </div>
-    <div class="feature-visual" style="background: url('/src/assets/images/hero_streetwear_fw26_1790379228007.jpg') center/cover no-repeat; position: relative;">
+    <div class="feature-visual" style="background: url('assets/images/hero_streetwear_fw26_1790379228007.webp') center/cover no-repeat; position: relative;">
         <div style="position: absolute; inset: 0; background: rgba(9,9,11,0.4);"></div>
     </div>
 </section>
@@ -854,8 +897,8 @@
 <section class="news" id="contact">
     <h2>Join The Cult</h2>
     <p>Early access to drops. Members only. No spam, ever.</p>
-    <form class="news-form" onsubmit="joinList(event)">
-        <input type="email" placeholder="YOUR EMAIL" required aria-label="Email address">
+    <form class="news-form" id="newsFormMain" action="#" method="post" target="_blank" rel="noopener">
+        <input type="email" name="EMAIL" placeholder="YOUR EMAIL" required aria-label="Email address">
         <button type="submit">Subscribe</button>
     </form>
 </section>
@@ -973,8 +1016,8 @@
         <div>
             <h4>Client Concierge</h4>
             <ul>
-                <li><button class="foot-link" onclick="openInfoModal('shipping')"><span class="arrow">→</span> Shipping & Transit</button></li>
-                <li><button class="foot-link" onclick="openInfoModal('returns')"><span class="arrow">→</span> Vault Returns (14-Day)</button></li>
+                <li><a href="legal/shipping.html" class="foot-link"><span class="arrow">→</span> Shipping & Transit</a></li>
+                <li><a href="legal/returns.html" class="foot-link"><span class="arrow">→</span> Vault Returns (14-Day)</a></li>
                 <li><button class="foot-link" onclick="openInfoModal('faq')"><span class="arrow">→</span> Garment Care & FAQ</button></li>
                 <li><button class="foot-link" onclick="openSizeGuide()"><span class="arrow">→</span> Size & Fit Matrix</button></li>
                 <li><button class="foot-link" onclick="trackOrderPrompt()"><span class="arrow">→</span> Track Dispatch</button></li>
@@ -1009,9 +1052,9 @@
                 <span class="pay-badge">Visa</span>
                 <span class="pay-badge">Mastercard</span>
                 <span class="pay-badge">Amex</span>
-                <span class="pay-badge">USDC</span>
+                <span class="pay-badge">Discover</span>
             </div>
-            <p class="security-note">256-Bit Encrypted Atelier Gateway. Every drop includes a cryptographically verifiable provenance certificate.</p>
+            <p class="security-note">Checkout is processed on an encrypted gateway by Snipcart — card data never touches our servers. Every order includes a cryptographically verifiable provenance certificate.</p>
         </div>
     </div>
 
@@ -1022,9 +1065,11 @@
     <div class="foot-bottom">
         <div>© 2026 GHOSTNAME WORLDWIDE S.A. ALL RIGHTS RESERVED.</div>
         <div class="foot-legal-links">
-            <button class="foot-legal-btn" onclick="openInfoModal('privacy')">Privacy Policy</button>
-            <button class="foot-legal-btn" onclick="openInfoModal('terms')">Terms of Sale</button>
-            <button class="foot-legal-btn" onclick="openInfoModal('cookies')">Cookie Preferences</button>
+            <a class="foot-legal-btn" href="legal/privacy.html">Privacy Policy</a>
+            <a class="foot-legal-btn" href="legal/terms.html">Terms of Sale</a>
+            <button class="foot-legal-btn" onclick="openCookieBanner()">Cookie Preferences</button>
+            <a class="foot-legal-btn" href="legal/shipping.html">Shipping</a>
+            <a class="foot-legal-btn" href="legal/returns.html">Returns & Refunds</a>
             <button class="foot-legal-btn" onclick="openInfoModal('sourcing')">Ethical Production</button>
         </div>
         <div class="foot-bottom-right">
@@ -1050,6 +1095,7 @@
         <span>TOTAL</span><span id="cartTotal">$0</span>
     </div>
     <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    <p class="cart-note" id="cartCurrencyNote">Prices shown in USD — charged in USD</p>
 </aside>
 
 <!-- ===== Product detail modal ===== -->
@@ -1118,63 +1164,23 @@
 <!-- ===== Checkout Modal ===== -->
 <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
     <button class="modal-close" onclick="closeCheckout()" aria-label="Close checkout">✕</button>
-    <div id="checkoutFormView">
+        <div id="checkoutFormView">
         <div class="checkout-head">
-            <h3 id="coTitle">Express Checkout</h3>
-            <p>Direct worldwide dispatch from Tokyo atelier. Insured courier delivery.</p>
+            <h3 id="coTitle">Order Review</h3>
+            <p>Direct worldwide dispatch from the Tokyo atelier. Insured courier delivery, duties pre-paid.</p>
         </div>
-        <form onsubmit="submitCheckout(event)">
-            <div class="checkout-form-grid">
-                <div class="checkout-full">
-                    <label class="checkout-label" for="coEmail">Email Address</label>
-                    <input class="checkout-input" type="email" id="coEmail" required placeholder="name@domain.com">
-                </div>
-                <div>
-                    <label class="checkout-label" for="coFirstName">First Name</label>
-                    <input class="checkout-input" type="text" id="coFirstName" required placeholder="Alex">
-                </div>
-                <div>
-                    <label class="checkout-label" for="coLastName">Last Name</label>
-                    <input class="checkout-input" type="text" id="coLastName" required placeholder="Vance">
-                </div>
-                <div class="checkout-full">
-                    <label class="checkout-label" for="coAddress">Shipping Address</label>
-                    <input class="checkout-input" type="text" id="coAddress" required placeholder="104 Shibuya Crossing">
-                </div>
-                <div>
-                    <label class="checkout-label" for="coCity">City</label>
-                    <input class="checkout-input" type="text" id="coCity" required placeholder="Tokyo">
-                </div>
-                <div>
-                    <label class="checkout-label" for="coPostal">Postal / Zip Code</label>
-                    <input class="checkout-input" type="text" id="coPostal" required placeholder="150-0002">
-                </div>
-                <div class="checkout-full">
-                    <label class="checkout-label" for="coPayment">Payment Method</label>
-                    <select class="checkout-input" id="coPayment">
-                        <option value="card">Credit Card (Visa / Mastercard / Amex)</option>
-                        <option value="apple">Apple Pay / Google Pay</option>
-                        <option value="cod">Cash on Delivery (COD) / Verified</option>
-                        <option value="crypto">USDC / Crypto Dispatch</option>
-                    </select>
-                </div>
-            </div>
-            <div class="checkout-summary-box">
-                <div class="checkout-row"><span>Items (<span id="coItemCount">0</span>)</span><span id="coSubtotal">$0</span></div>
-                <div class="checkout-row"><span>Worldwide Express Shipping</span><span>FREE</span></div>
-                <div class="checkout-row total"><span>Total Due</span><span id="coTotal">$0</span></div>
-            </div>
-            <button type="submit" class="checkout-submit-btn">Authorize Order & Dispatch</button>
-        </form>
+        <div class="checkout-summary-box">
+            <div class="checkout-row"><span>Items (<span id="coItemCount">0</span>)</span><span id="coSubtotal">$0</span></div>
+            <div class="checkout-row"><span>Worldwide Express Shipping</span><span>FREE</span></div>
+            <div class="checkout-row total"><span>Total — charged in <span id="coCurrency">USD</span></span><span id="coTotal">$0</span></div>
+        </div>
+        <p style="color:var(--muted); font-size:0.78rem; margin-top:16px; line-height:1.6;">Payment runs on Snipcart's encrypted hosted checkout — card, Apple Pay and Google Pay. Card data never touches our servers.</p>
+        <button type="button" class="checkout-submit-btn" onclick="checkoutHandoff(event)">Continue to Secure Checkout →</button>
     </div>
     <div id="checkoutSuccessView" class="checkout-success-view" style="display: none;">
         <div class="checkout-check-badge">✓</div>
         <h3>Order Confirmed</h3>
-        <p style="color:var(--muted); font-size: 0.85rem; margin-top: 10px;" id="coConfirmMsg">Order #GW-8942 has been placed. Dispatch tracking details sent to your email.</p>
-        <div class="checkout-summary-box" style="text-align: left; margin: 24px 0;">
-            <div class="checkout-row"><span>Status</span><span style="color:#fff; font-weight: 600;">Processing & Insured Pack</span></div>
-            <div class="checkout-row"><span>Estimated Arrival</span><span style="color:#fff;">3–5 Business Days</span></div>
-        </div>
+        <p style="color:var(--muted); font-size: 0.85rem; margin-top: 10px;" id="coConfirmMsg">Payment received. Dispatch tracking details are on their way to your email.</p>
         <button class="checkout-submit-btn" onclick="finishCheckout()">Return to Storefront</button>
     </div>
 </div>
@@ -1295,7 +1301,7 @@
 
 <!-- ===== Cookie consent ===== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
-    <p>This site uses cookies to remember your cart, wishlist and preferences. No tracking. No noise.</p>
+    <p>Essential storage keeps your cart, wishlist and preferences working. Optional analytics stay switched off unless you accept.</p>
     <div class="cookie-actions">
         <button onclick="cookieChoice(true)">Accept</button>
         <button class="ghost" onclick="cookieChoice(false)">Decline</button>
@@ -1311,30 +1317,40 @@
    All prices are stored in USD; fmt() converts for display.
    Cart / wishlist / currency / recently-viewed persist in localStorage.
    ============================================================ */
-const products = [
-    { id: "p1", name: "Phantom Heavyweight Hoodie", cat: "Outerwear", price: 145, tag: "NEW", fabric: "500 GSM French Terry", img: "/src/assets/images/product_phantom_hoodie_1790379242145.jpg", initial: "01" },
-    { id: "p2", name: "Void Boxy Tee",              cat: "Tops",      price: 68,  tag: "",    fabric: "320 GSM Combed Cotton", img: "/src/assets/images/product_void_tee_1790379252763.jpg", initial: "02" },
-    { id: "p3", name: "Shadow Cargo Pants",         cat: "Bottoms",   price: 120, tag: "NEW", fabric: "Technical Ripstop",     img: "/src/assets/images/product_cargo_pants_1790379263399.jpg", initial: "03" },
-    { id: "p4", name: "Eclipse Bomber Jacket",      cat: "Outerwear", price: 210, tag: "",    fabric: "Bonded Heavy Twill",    img: "/src/assets/images/product_bomber_jacket_1790379273617.jpg", initial: "04" },
-    { id: "p5", name: "Ghost Knit Beanie",          cat: "Accessories", price: 42, tag: "",   fabric: "100% Merino Wool",      img: "/src/assets/images/product_knit_beanie_1790379290197.jpg", initial: "05" },
-    { id: "p6", name: "Anon Zip Vest",              cat: "Outerwear", price: 98,  tag: "LIMITED", fabric: "Modular Cordura",   img: "/src/assets/images/product_zip_vest_1790379301258.jpg", initial: "06" },
-];
-const archive = [
-    { id: "a1", name: "Spectre Longsleeve",  cat: "Tops",      price: 78,  tag: "SOLD OUT", fabric: "300 GSM Interlock",   img: "/src/assets/images/product_void_tee_1790379252763.jpg", initial: "A1" },
-    { id: "a2", name: "Mirage Trackpants",   cat: "Bottoms",   price: 110, tag: "",         fabric: "Heavy Double Knit",   img: "/src/assets/images/product_cargo_pants_1790379263399.jpg", initial: "A2" },
-    { id: "a3", name: "Wraith Overshirt",    cat: "Outerwear", price: 165, tag: "SOLD OUT", fabric: "Dense Moleskin",      img: "/src/assets/images/product_bomber_jacket_1790379273617.jpg", initial: "A3" },
-];
-const ALL = [...products, ...archive];
 const SIZES = ["S", "M", "L", "XL"];
 let activeCategory = "All";
 
-/* Currency: fixed DEMO rates (not live FX). JPY renders with 0 decimals. */
-const RATES   = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 157 }; // demo rates
-let currency  = localStorage.getItem("gn_currency") || "USD";
-let cart      = JSON.parse(localStorage.getItem("gn_cart") || "[]");
-let wishlist  = new Set(JSON.parse(localStorage.getItem("gn_wishlist") || "[]"));
-let recent    = JSON.parse(localStorage.getItem("gn_recent") || "[]");
+/* Catalog is hydrated from products.json — the same file Snipcart's JSON
+   crawler uses to validate real order prices. Add inventory there. */
+let ALL = [];
+let products = [];
+let archive = [];
+
+/* Currency: one table drives BOTH the displayed prices and the currency
+   Snipcart charges in. Each non-USD column is a fixed price point defined
+   in products.json (a real multi-currency price, not a fake conversion). */
+const RATES  = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 157 };
+const dpFor  = c => (c === "JPY" ? 0 : 2);
+let currency = localStorage.getItem("gn_currency") || "USD";
+let cart     = JSON.parse(localStorage.getItem("gn_cart") || "[]");
+let wishlist = new Set(JSON.parse(localStorage.getItem("gn_wishlist") || "[]"));
+let recent   = JSON.parse(localStorage.getItem("gn_recent") || "[]");
+let SNIPCART_CONFIGURED = false;
 const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function fmt(usd) {
+    const v = usd * RATES[currency];
+    return new Intl.NumberFormat("en-US", {
+        style: "currency", currency,
+        minimumFractionDigits: dpFor(currency), maximumFractionDigits: dpFor(currency)
+    }).format(v);
+}
+/* price in the active display/charge currency */
+function unitPrice(p) {
+    return (p && typeof p.price === "object" && p.price !== null)
+        ? p.price[currency.toLowerCase()]
+        : p.price;
+}
 
 function fmt(usd) {
     const v = usd * RATES[currency];
@@ -1360,7 +1376,7 @@ function ghostSVG(cls) {
 function renderGrid(list, target) {
     const grid = document.getElementById(target);
     if (!grid) return;
-    grid.innerHTML = list.map(p => `
+    grid.innerHTML = list.map((p, idx) => `
         <div class="card" data-id="${p.id}" tabindex="0" role="button"
              aria-label="${p.name} — view details"
              onclick="openProduct('${p.id}')"
@@ -1368,12 +1384,15 @@ function renderGrid(list, target) {
             <div class="card-img">
                 ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
                 <span class="quicklook-hint">Quick look +</span>
-                <img class="card-photo" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <img class="card-photo" src="${p.img}" alt="${p.name}"
+                     ${idx === 0 && target === "productGrid" ? 'fetchpriority="high"' : 'loading="lazy"'}
+                     decoding="async"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                 <div class="card-img-fallback" style="display:none;">${p.initial}</div>
                 <button class="heart-btn ${wishlist.has(p.id) ? 'active' : ''}" aria-label="Toggle wishlist for ${p.name}"
                         onclick="toggleWish('${p.id}', event)">♥</button>
                 ${p.tag !== 'SOLD OUT'
-                    ? `<div class="add-btn" onclick="addToCart('${p.name}',${p.price},1,event)">Add to Cart — ${fmt(p.price)}</div>`
+                    ? `<div class="add-btn" onclick="addToCart('${p.id}',1,event)">Add to Cart — ${fmt(unitPrice(p))}</div>`
                     : `<div class="add-btn" style="background:#18181b;color:#71717a;cursor:not-allowed;">Sold Out</div>`}
             </div>
             <div class="card-info">
@@ -1381,7 +1400,7 @@ function renderGrid(list, target) {
                     <h3>${p.name}</h3>
                     <div class="cat">${p.cat} · ${p.fabric || 'Heavyweight'}</div>
                 </div>
-                <div class="price">${fmt(p.price)}</div>
+                <div class="price">${fmt(unitPrice(p))}</div>
             </div>
         </div>
     `).join("");
@@ -1423,24 +1442,96 @@ function toggleWish(id, e) {
 }
 
 /* ============================================================
-   CART (now with quantity, persistence, toasts — no alert())
+   CART → Snipcart. The local list is a lightweight display mirror;
+   the source of truth (and the payment) is Snipcart's hosted cart.
+   Until a public API key is set (see SET_YOUR_SNIPCART_PUBLIC_KEY),
+   the site stays browsable and checkout explains what's missing.
    ============================================================ */
-function addToCart(name, priceUSD, qty, e) {
+let snipcartBound = false;
+
+function SnipcartReady(timeout) {
+    timeout = timeout || 8000;
+    return new Promise((resolve, reject) => {
+        const t0 = Date.now();
+        (function poll() {
+            if (window.Snipcart && window.Snipcart.api && window.Snipcart.api.cart) return resolve(window.Snipcart);
+            if (Date.now() - t0 > timeout) return reject(new Error("snipcart-timeout"));
+            setTimeout(poll, 120);
+        })();
+    });
+}
+
+function addToCart(id, qty, e) {
     if (e) e.stopPropagation();               /* add-btn must not open the modal */
-    const found = cart.find(c => c.name === name);
-    found ? found.qty += qty : cart.push({ name, price: priceUSD, qty });
+    const p = ALL.find(x => x.id === id);
+    if (!p || p.tag === "SOLD OUT") return;
+    const line = cart.find(c => c.id === id);
+    line ? line.qty += qty : cart.push({ id: p.id, name: p.name, price: unitPrice(p), qty });
     saveCart(); updateCart();
-    if (!document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
+    if (!SNIPCART_CONFIGURED) {
+        toast(p.name + " added — connect a Snipcart key to check out.");
+        return;
+    }
+    window.LoadSnipcart();
+    SnipcartReady()
+        .then(api => api.cart.items.add({
+            id: p.id,
+            name: p.name,
+            price: unitPrice(p),
+            url: new URL(p.url || "products.json", location.href).href,
+            quantity: qty
+        }))
+        .then(() => Snipcart.api.theme.cart.open())
+        .catch(err => {
+            console.warn("[snipcart] add failed:", err);
+            toast("Could not sync the item — try again.");
+        });
 }
 function cartQty(i, d, e) {
     if (e) e.stopPropagation();
     cart[i].qty = Math.max(1, cart[i].qty + d);
-    saveCart(); updateCart();
+    saveCart(); updateCart(); syncQtyToSnipcart();
 }
 function removeItem(i, e) {
     if (e) e.stopPropagation();
+    const line = cart[i];
     cart.splice(i, 1); saveCart(); updateCart();
+    if (SNIPCART_CONFIGURED && window.SnipcartReady) {
+        SnipcartReady().then(api => {
+            const it = api.cart.items.items.find(x => x.id === line.id);
+            if (it) api.cart.items.remove(it.uniqueId);
+        }).catch(() => {});
+    }
 }
+function syncQtyToSnipcart() {
+    if (!SNIPCART_CONFIGURED || !window.SnipcartReady) return;
+    SnipcartReady().then(api => {
+        cart.forEach(line => {
+            const it = api.cart.items.items.find(x => x.id === line.id);
+            if (it && it.quantity !== line.qty) api.cart.items.update({ uniqueId: it.uniqueId, quantity: line.qty });
+        });
+    }).catch(() => {});
+}
+function syncCartFromSnipcart() {
+    if (!(window.Snipcart && window.Snipcart.api)) return;
+    try {
+        const items = (Snipcart.api.cart.items && Snipcart.api.cart.items.items) || [];
+        cart = items.map(i => ({ id: i.id, name: i.name, price: i.price, qty: i.quantity }));
+        saveCart(); updateCart();
+    } catch (err) { /* widget mid-update */ }
+}
+function bindSnipcartEvents() {
+    if (snipcartBound || !(window.Snipcart && window.Snipcart.events)) return;
+    snipcartBound = true;
+    Snipcart.events.on("order.completed", () => {
+        cart = []; saveCart(); updateCart();
+        toast("Payment received — order confirmation on its way to your inbox.");
+    });
+    Snipcart.events.on("item.added", syncCartFromSnipcart);
+    Snipcart.events.on("item.updated", syncCartFromSnipcart);
+    Snipcart.events.on("item.removed", syncCartFromSnipcart);
+}
+document.addEventListener("snipcart.ready", bindSnipcartEvents);
 function saveCart() { localStorage.setItem("gn_cart", JSON.stringify(cart)); }
 
 function updateCart() {
@@ -1465,21 +1556,43 @@ function updateCart() {
 }
 
 function toggleCart() {
+    if (SNIPCART_CONFIGURED) {
+        window.LoadSnipcart();
+        SnipcartReady().then(() => Snipcart.api.theme.cart.open())
+            .catch(() => toast("Secure checkout is loading — try again."));
+        return;
+    }
     document.getElementById("cartDrawer").classList.toggle("open");
     document.getElementById("overlay").classList.toggle("show");
 }
 
 function checkout() {
     if (cart.length === 0) { toast("Your cart is empty."); return; }
-    if (document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
+    if (SNIPCART_CONFIGURED) {
+        if (document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
+        window.LoadSnipcart();
+        SnipcartReady().then(() => Snipcart.api.theme.cart.open()).catch(() => {});
+        return;
+    }
+    /* Fallback review view — shown until a Snipcart public key is configured */
     const total = cart.reduce((s, c) => s + c.price * c.qty, 0);
     const count = cart.reduce((s, c) => s + c.qty, 0);
     document.getElementById("coItemCount").textContent = count;
     document.getElementById("coSubtotal").textContent = fmt(total);
     document.getElementById("coTotal").textContent = fmt(total);
+    document.getElementById("coCurrency").textContent = currency;
     document.getElementById("checkoutFormView").style.display = "block";
     document.getElementById("checkoutSuccessView").style.display = "none";
     openModal("checkoutModal");
+}
+
+function checkoutHandoff(e) {
+    if (e) e.preventDefault();
+    if (cart.length === 0) { toast("Your cart is empty."); return; }
+    if (document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
+    window.LoadSnipcart();
+    SnipcartReady().then(() => Snipcart.api.theme.cart.open())
+        .catch(() => toast("Secure checkout is loading — try again."));
 }
 
 function closeCheckout() {
@@ -1487,28 +1600,15 @@ function closeCheckout() {
     document.getElementById("modalOverlay").classList.remove("show");
 }
 
-function submitCheckout(e) {
-    e.preventDefault();
-    const email = document.getElementById("coEmail").value;
-    const orderNum = "GW-" + Math.floor(1000 + Math.random() * 9000);
-    document.getElementById("coConfirmMsg").textContent = `Order #${orderNum} confirmed. Tracking and customs dispatch details sent to ${email}.`;
-    document.getElementById("checkoutFormView").style.display = "none";
-    document.getElementById("checkoutSuccessView").style.display = "block";
-    cart = [];
-    saveCart();
-    updateCart();
-}
-
 function finishCheckout() {
     closeCheckout();
     toast("Thank you for choosing GHOSTNAME WORLDWIDE.");
 }
 
-function joinList(e) {
-    e.preventDefault();
-    e.target.querySelector("input").value = "";
-    toast("Welcome to the cult. Check your inbox.");
-}
+/* Newsletter forms now POST straight to the ESP embedded-form endpoint
+   (Mailchimp-style: /subscribe/post?u=...&id=...). Configure the action in
+   the boot block below; no backend required. */
+function joinList() { /* handled by the form action */ }
 
 /* ============================================================
    PRODUCT DETAIL MODAL — gallery, sizes, qty, related
@@ -1526,7 +1626,7 @@ function openProduct(id) {
 
     document.getElementById("pdCat").textContent = pd.cat + (pd.fabric ? " · " + pd.fabric : "") + (pd.tag ? " · " + pd.tag : "");
     document.getElementById("pdName").textContent = pd.name;
-    document.getElementById("pdPrice").textContent = fmt(pd.price);
+    document.getElementById("pdPrice").textContent = fmt(unitPrice(pd));
     document.getElementById("pdDesc").textContent =
         "Cut from " + (pd.fabric || "heavyweight 500 GSM Japanese cotton") + ". Boxy dropped-shoulder fit with reinforced double-needle stitching. Produced in a limited 500-unit atelier run.";
     document.getElementById("pdAdd").disabled = pd.tag === "SOLD OUT";
@@ -1536,7 +1636,7 @@ function openProduct(id) {
     const thumbs = document.getElementById("pdThumbs");
     thumbs.innerHTML = [0, 1, 2].map((_, i) =>
         `<button class="pd-thumb ${i === 0 ? 'active' : ''}" onclick="pdSetView(${i})" aria-label="View angle ${i + 1}">
-            <img src="${pd.img}" alt="${pd.name}">
+            <img src="${pd.webp || pd.img}" alt="${pd.name}" loading="lazy" decoding="async">
         </button>`).join("");
     pdPaintMain();
 
@@ -1551,10 +1651,10 @@ function openProduct(id) {
     document.getElementById("relatedStrip").innerHTML = rel.map(r =>
         `<button class="related-item" onclick="openProduct('${r.id}')">
             <div style="height:60px; overflow:hidden; margin-bottom:8px; background:#161619;">
-                <img src="${r.img}" alt="${r.name}" style="width:100%; height:100%; object-fit:cover;">
+                <img src="${r.webp || r.img}" alt="${r.name}" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;">
             </div>
             <h5>${r.name}</h5>
-            <div class="r-price">${fmt(r.price)}</div>
+            <div class="r-price">${fmt(unitPrice(r))}</div>
         </button>`).join("");
 
     openModal("pdModal");
@@ -1562,7 +1662,7 @@ function openProduct(id) {
 
 function pdPaintMain() {
     const main = document.getElementById("pdMain");
-    main.innerHTML = `<img class="pd-main-img" src="${pd.img}" alt="${pd.name}">`;
+    main.innerHTML = `<img class="pd-main-img" src="${pd.webp || pd.img}" alt="${pd.name}" decoding="async">`;
 }
 function pdSetView(i) {
     pdView = i;
@@ -1582,7 +1682,7 @@ function pdQty(d) {
 }
 function pdAddToCart() {
     if (!pd || pd.tag === "SOLD OUT") return;   /* sold out can never be added */
-    addToCart(pd.name, pd.price, pdQtyVal);
+    addToCart(pd.id, pdQtyVal);
     closeModal();
     toast(pd.name + " × " + pdQtyVal + " (" + pdSize + ") added");
 }
@@ -1633,11 +1733,7 @@ function quickNavCategory(cat) {
     if (shopEl) shopEl.scrollIntoView({ behavior: "smooth" });
 }
 
-function joinFooterList(e) {
-    e.preventDefault();
-    e.target.querySelector("input").value = "";
-    toast("Welcome to the FW26 Drop List. Vault invite sent.");
-}
+function joinFooterList() { /* handled by the form action */ }
 
 function trackOrderPrompt() {
     openInfoModal('shipping');
@@ -1671,7 +1767,7 @@ function openLightbox() {
     document.getElementById("lightbox").classList.add("open");
 }
 function lbPaint() {
-    document.getElementById("lbStage").innerHTML = `<img src="${pd.img}" alt="${pd.name}" style="max-width:100%; max-height:80vh; object-fit:contain;">`;
+    document.getElementById("lbStage").innerHTML = `<img src="${pd.webp || pd.img}" alt="${pd.name}" style="max-width:100%; max-height:80vh; object-fit:contain;">`;
 }
 function lbNav(d) {
     pdView = (pdView + d + 3) % 3;
@@ -1697,7 +1793,7 @@ function renderSearch(q) {
         hits.map(p => `
             <button class="search-hit" onclick="closeSearch();openProduct('${p.id}')">
                 <div style="display:flex; align-items:center; gap:14px;">
-                    <img src="${p.img}" alt="${p.name}" style="width:40px; height:48px; object-fit:cover; background:#161619;">
+                    <img src="${p.webp || p.img}" alt="${p.name}" loading="lazy" decoding="async" style="width:40px; height:48px; object-fit:cover; background:#161619;">
                     <span>${p.name}<br><span class="sh-cat">${p.cat}${p.tag ? " · " + p.tag : ""}</span></span>
                 </div>
                 <span>${fmt(p.price)}</span>
@@ -1708,16 +1804,28 @@ function renderSearch(q) {
    CURRENCY — re-price grids, cart, modal, search, recents live
    ============================================================ */
 function setCurrency(c) {
+    if (!RATES[c]) return;
     currency = c;
     localStorage.setItem("gn_currency", c);
+    const sel = document.getElementById("currencySelect");
+    if (sel && sel.value !== c) sel.value = c;
+    /* Display prices AND the real charge currency move together: */
+    if (window.SnipcartSettings) window.SnipcartSettings.currency = c.toLowerCase();
     renderGrid(products, "productGrid");
     renderGrid(archive, "archiveGrid");
     renderRecent(); updateCart(); updateWishCount(); observeCards();
+    updateCurrencyNotes();
     if (pd && document.getElementById("pdModal").classList.contains("open")) {
-        document.getElementById("pdPrice").textContent = fmt(pd.price);
+        document.getElementById("pdPrice").textContent = fmt(unitPrice(pd));
         openProductRelatedRefresh();
     }
-    toast("Prices now in " + currency + " (demo rates)");
+    toast("Prices now shown and charged in " + currency);
+}
+function updateCurrencyNotes() {
+    const note = document.getElementById("cartCurrencyNote");
+    if (note) note.textContent = "Prices shown in " + currency + " — charged in " + currency;
+    const co = document.getElementById("coCurrency");
+    if (co) co.textContent = currency;
 }
 function openProductRelatedRefresh() {
     /* refresh related-strip prices without reopening the modal state */
@@ -1725,7 +1833,7 @@ function openProductRelatedRefresh() {
     document.getElementById("relatedStrip").innerHTML = rel.map(r =>
         `<button class="related-item" onclick="openProduct('${r.id}')">
             <div class="r-num">${r.initial}</div><h5>${r.name}</h5>
-            <div class="r-price">${fmt(r.price)}</div>
+            <div class="r-price">${fmt(unitPrice(r))}</div>
         </button>`).join("");
 }
 
@@ -1739,7 +1847,26 @@ function initCookies() {
 function cookieChoice(accepted) {
     localStorage.setItem("gn_cookies", accepted ? "accepted" : "declined");
     document.getElementById("cookieBanner").classList.remove("show");
-    toast(accepted ? "Preferences saved." : "Cookies declined. Storage cleared on exit.");
+    if (accepted) initAnalytics(); else disableAnalytics();
+    toast(accepted ? "Preferences saved — analytics enabled." : "Preferences saved — analytics stay off.");
+}
+function openCookieBanner() {
+    document.getElementById("cookieBanner").classList.add("show");
+}
+/* Consent-gated analytics: nothing loads until cookieChoice(true). Swap in
+   your provider here (Plausible shown — cookieless, GDPR-friendly). */
+function initAnalytics() {
+    if (window.GN_ANALYTICS) return;
+    window.GN_ANALYTICS = true;
+    const s = document.createElement("script");
+    s.defer = true;
+    s.dataset.domain = "ghostnameworldwide.com";
+    s.src = "https://plausible.io/js/script.js";
+    document.head.appendChild(s);
+}
+function disableAnalytics() {
+    window.GN_ANALYTICS = false;
+    document.querySelectorAll('script[src*="plausible.io"]').forEach(s => s.remove());
 }
 
 /* ============================================================
@@ -1857,15 +1984,76 @@ document.addEventListener("keydown", e => {
 const CITIES = ["Tokyo", "Berlin", "Seoul", "London", "New York", "Manila", "Paris", "everywhere"];
 document.getElementById("eggCity").textContent = CITIES[Math.floor(Math.random() * CITIES.length)];
 
-document.getElementById("currencySelect").value = currency;
-renderGrid(products, "productGrid");
-renderGrid(archive, "archiveGrid");
-renderRecent();
-updateCart();
-updateWishCount();
-initCookies();
-initAtelierClocks();
-observeCards();
+(async function boot() {
+    /* Catalog comes from products.json — the same file Snipcart's JSON
+       crawler validates orders against. Add inventory there, not here. */
+    try {
+        const res = await fetch("products.json");
+        ALL = await res.json();
+    } catch (err) {
+        console.error("products.json failed to load", err);
+        toast("Catalog failed to load — check products.json");
+        return;
+    }
+    products = ALL.filter(p => p.id.charAt(0) === "p");
+    archive  = ALL.filter(p => p.id.charAt(0) === "a");
+
+    /* Snipcart public key configured? → hosted cart takes over checkout. */
+    SNIPCART_CONFIGURED = !/SET_YOUR_SNIPCART_PUBLIC_KEY/.test(
+        (window.SnipcartSettings && window.SnipcartSettings.publicApiKey) || "");
+    document.body.classList.toggle("snipcart-unconfigured", !SNIPCART_CONFIGURED);
+
+    /* Newsletter → ESP embedded-form endpoint (no backend needed).
+       Swap in your audience's u/id values from the Mailchimp signup form,
+       or the equivalent endpoint for Buttondown / ConvertKit. */
+    const NEWSLETTER_ACTION = "https://ghostnameworldwide.us1.list-manage.com/subscribe/post?u=REPLACE_WITH_LIST_U_ID&id=REPLACE_WITH_LIST_ID";
+    document.querySelectorAll("form.news-form, form.footer-news-input-wrap").forEach(f => {
+        f.action = NEWSLETTER_ACTION;
+        f.target = "_blank";
+        f.rel = "noopener";
+        f.addEventListener("submit", () => toast("Welcome to the cult. Confirm via the inbox."));
+    });
+
+    /* Load Snipcart only once a key is present. */
+    if (SNIPCART_CONFIGURED && window.LoadSnipcart) window.LoadSnipcart();
+    bindSnipcartEvents();
+
+    /* Restore analytics consent before anything else runs. */
+    if (localStorage.getItem("gn_cookies") === "accepted") initAnalytics();
+
+    /* Nav readability fallback: difference-blend inverts over black/white,
+       but over mid-tone hero areas it can smear. Sample the hero's top
+       strip once; if it's mid-tone, switch to the solid frosted bar. */
+    try {
+        const probe = document.createElement("canvas");
+        probe.width = 24; probe.height = 12;
+        const pctx = probe.getContext("2d");
+        const himg = new Image();
+        himg.onload = () => {
+            try {
+                pctx.drawImage(himg, 0, 0, 24, 12);
+                const d = pctx.getImageData(0, 0, 24, 12).data;
+                let acc = 0;
+                for (let i = 0; i < d.length; i += 4) acc += (d[i] + d[i + 1] + d[i + 2]) / 3;
+                const lum = acc / (d.length / 4);
+                if (lum > 96 && lum < 176) document.body.classList.add("nav-fallback");
+                else document.body.classList.remove("nav-fallback");
+            } catch (e) { /* tainted canvas — keep the difference blend */ }
+        };
+        himg.src = "assets/images/hero_streetwear_fw26_1790379228007.webp";
+    } catch (e) { /* ignore */ }
+
+    document.getElementById("currencySelect").value = currency;
+    renderGrid(products, "productGrid");
+    renderGrid(archive, "archiveGrid");
+    renderRecent();
+    updateCart();
+    updateWishCount();
+    updateCurrencyNotes();
+    initCookies();
+    initAtelierClocks();
+    observeCards();
+})();
 </script>
 
 </body>

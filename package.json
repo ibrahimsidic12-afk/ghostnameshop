@@ -7,10 +7,14 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node -e \"console.log('Build complete')\"",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "build:dist": "node scripts/build-dist.mjs",
+    "build": "node scripts/build-dist.mjs",
+    "og": "python3 scripts/generate_og_image.py",
     "lint": "node -e \"console.log('No lint errors')\""
   },
-  "dependencies": {
-    "express": "^4.21.2"
+  "dependencies": {},
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }

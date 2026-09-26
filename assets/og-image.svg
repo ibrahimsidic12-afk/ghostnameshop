@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="GHOSTNAME WORLDWIDE share card: faceless ski mask above the wordmark on black">
-  <title>GHOSTNAME WORLDWIDE — share card</title>
-  <rect width="1200" height="630" fill="#000000"/>
-  <path fill="#ffffff" fill-rule="evenodd" d="M 600,96 C 656,96 688,148 688,212 C 688,282 660,334 600,334 C 540,334 512,282 512,212 C 512,148 544,96 600,96 Z M 576,196 a 16,16 0 1,0 32,0 a 16,16 0 1,0 -32,0 Z M 632,196 a 16,16 0 1,0 32,0 a 16,16 0 1,0 -32,0 Z"/>
-  <text x="600" y="462" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="900" font-size="104" letter-spacing="-3" fill="#ffffff">GHOSTNAME</text>
-  <text x="600" y="514" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="400" font-size="30" letter-spacing="20" fill="#ffffff">WORLDWIDE</text>
-  <line x1="420" y1="546" x2="780" y2="546" stroke="#ffffff" stroke-width="1"/>
-  <text x="600" y="582" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="400" font-size="17" letter-spacing="6" fill="#ffffff">FACELESS.FEARLESS.FOREVER.</text>
-</svg>
