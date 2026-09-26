@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GHOSTNAME WORLDWIDE — Premium Streetwear</title>
+<link rel="icon" type="image/svg+xml" href="/assets/logo-monogram.svg">
 
 <!-- ===== SEO / SOCIAL (JSON-LD + Open Graph + Twitter) ===== -->
 <meta name="description" content="GHOSTNAME WORLDWIDE — premium anonymous streetwear. Faceless. Fearless. Forever. FW26 inaugural drop, limited runs, est. 2026.">
 <meta property="og:title" content="GHOSTNAME WORLDWIDE — Premium Streetwear">
 <meta property="og:description" content="Faceless. Fearless. Forever. Premium anonymous streetwear. FW26 inaugural drop. Est. 2026.">
+<meta property="og:image" content="/assets/og-image.svg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GHOSTNAME WORLDWIDE">
 <meta name="twitter:card" content="summary">
@@ -27,21 +29,21 @@
 }
 </script>
 
-<!-- ===== Typography: Inter (body) + Space Grotesk (headings) ===== -->
+<!-- ===== Typography: Plus Jakarta Sans (body) + Syne (headings) ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
 <style>
     :root {
-        --bg: #0a0a0a;
-        --bg-soft: #111111;
-        --text: #f4f4f4;
-        --muted: #888888;
+        --bg: #09090b;
+        --bg-soft: #121215;
+        --text: #f4f4f5;
+        --muted: #a1a1aa;
         --accent: #ffffff;
-        --line: rgba(255,255,255,0.08);
-        --font-head: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-        --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        --line: rgba(255,255,255,0.09);
+        --font-head: 'Syne', sans-serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -128,50 +130,35 @@
         display: flex; flex-direction: column;
         justify-content: center; align-items: center;
         text-align: center; position: relative;
-        background: radial-gradient(circle at 50% 40%, rgba(40,40,40,0.6), transparent 60%),
-                    linear-gradient(180deg, #050505, #141414);
+        background: linear-gradient(180deg, rgba(9,9,11,0.65) 0%, rgba(9,9,11,0.88) 100%),
+                    url('/src/assets/images/hero_streetwear_fw26_1790379228007.jpg') center/cover no-repeat;
         overflow: hidden;
     }
-    .hero-bgtext {
-        position: absolute;
-        font-size: 26vw; font-weight: 900;
-        color: rgba(255,255,255,0.025);
-        letter-spacing: -1vw; white-space: nowrap;
-        user-select: none; pointer-events: none;
-        animation: drift 20s linear infinite alternate;
-    }
-    @keyframes drift { from { transform: translateX(-4%); } to { transform: translateX(4%); } }
-    .hero-content { position: relative; z-index: 2; }
-
-    /* ===== Maintenance-shell ghost mark (hero image placeholder) ===== */
-    .hero-ghost {
-        position: absolute; left: 50%; top: 50%;
-        width: min(420px, 60vw); transform: translate(-50%, -50%);
-        pointer-events: none; user-select: none; opacity: 0.6;
-    }
-    .ghost-svg { width: 100%; height: 100%; display: block; fill: rgba(255,255,255,0.05); }
-    .ghost-eye { fill: #0d0d0d; }
+    .hero-content { position: relative; z-index: 2; max-width: 860px; padding: 0 24px; }
 
     .hero h1 {
-        font-size: clamp(2.5rem, 9vw, 8rem); font-weight: 900;
-        letter-spacing: -2px; line-height: 0.9;
+        font-size: clamp(2.8rem, 8.5vw, 6.8rem); font-weight: 900;
+        letter-spacing: -2px; line-height: 0.95;
+        text-wrap: balance;
         opacity: 0; animation: rise 1s ease forwards 0.2s;
     }
     .hero .sub {
-        margin-top: 22px; font-size: 0.8rem; letter-spacing: 6px;
+        margin-top: 22px; font-size: 0.82rem; letter-spacing: 4px;
         text-transform: uppercase; color: var(--muted);
         opacity: 0; animation: rise 1s ease forwards 0.5s;
     }
     .hero .cta {
-        display: inline-block; margin-top: 42px;
-        padding: 16px 46px; border: 1px solid #fff;
+        display: inline-block; margin-top: 36px;
+        padding: 16px 42px; border: 1px solid #fff;
+        background: rgba(255,255,255,0.06);
+        backdrop-filter: blur(8px);
         color: #fff; text-decoration: none;
-        font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
-        transition: background 0.4s ease, color 0.4s ease, letter-spacing 0.4s ease;
+        font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
+        transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
         opacity: 0; animation: rise 1s ease forwards 0.8s;
     }
-    .hero .cta:hover { background: #fff; color: #000; letter-spacing: 5px; }
-    @keyframes rise { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
+    .hero .cta:hover { background: #fff; color: #000; }
+    @keyframes rise { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
     .scroll-hint {
         position: absolute; bottom: 30px; left: 50%;
         transform: translateX(-50%); font-size: 0.65rem;
@@ -185,68 +172,130 @@
     .marquee-track span { margin: 0 30px; }
     @keyframes scroll { from{transform:translateX(0);} to{transform:translateX(-50%);} }
 
-    .section { padding: 120px 48px; }
+    .section { padding: 100px 48px; }
     .section-head {
         display: flex; justify-content: space-between; align-items: flex-end;
-        margin-bottom: 60px; border-bottom: 1px solid var(--line); padding-bottom: 24px;
+        margin-bottom: 40px; border-bottom: 1px solid var(--line); padding-bottom: 20px;
+        flex-wrap: wrap; gap: 20px;
     }
-    .section-head h2 { font-size: clamp(1.8rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -1px; }
-    .section-head span { color: var(--muted); font-size: 0.75rem; letter-spacing: 2px; }
+    .section-head h2 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; letter-spacing: -1px; }
+    .section-head-right { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .section-head span.meta { color: var(--muted); font-size: 0.75rem; letter-spacing: 2px; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 4px; }
+    /* Interactive filter controls */
+    .filter-tabs { display: flex; gap: 6px; background: rgba(255,255,255,0.04); padding: 4px; border: 1px solid var(--line); }
+    .filter-btn {
+        background: transparent; border: none; color: var(--muted);
+        padding: 8px 16px; font-family: var(--font-body); font-size: 0.68rem;
+        letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .filter-btn:hover { color: #fff; }
+    .filter-btn.active { background: #fff; color: #000; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
     .card {
         background: var(--bg-soft); overflow: hidden; position: relative; cursor: pointer;
-        opacity: 0; transform: translateY(40px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        opacity: 0; transform: translateY(30px); border: 1px solid var(--line);
+        transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease;
     }
+    .card:hover { border-color: rgba(255,255,255,0.22); }
     .card.visible { opacity: 1; transform: translateY(0); }
 
-    /* Gradient art variants for programmatic placeholder "photography" */
-    .grad-0 { background: linear-gradient(135deg,#1a1a1a,#0d0d0d); }
-    .grad-1 { background: linear-gradient(135deg,#181818,#050505); }
-    .grad-2 { background: linear-gradient(135deg,#1e1e1e,#101010); }
-    .grad-3 { background: linear-gradient(135deg,#202020,#0c0c0c); }
-
     .card-img {
-        height: 420px; display: flex; align-items: center; justify-content: center;
-        font-size: 5rem; font-weight: 900; color: rgba(255,255,255,0.06);
-        position: relative; transition: transform 0.6s ease; overflow: hidden;
-        font-family: var(--font-head);
+        height: 440px; display: flex; align-items: center; justify-content: center;
+        position: relative; overflow: hidden; background: #161619;
     }
-    .card:hover .card-img { transform: scale(1.06); }
-    .tag { position: absolute; top: 16px; left: 16px; background: #fff; color:#000; font-size: 0.6rem; padding: 5px 10px; letter-spacing: 2px; font-weight: 700; z-index: 3; }
-    .card-info { padding: 20px 22px 26px; display: flex; justify-content: space-between; align-items: flex-start; }
-    .card-info h3 { font-size: 0.9rem; letter-spacing: 1px; font-weight: 600; }
-    .card-info .cat { color: var(--muted); font-size: 0.68rem; letter-spacing: 2px; margin-top: 4px; text-transform: uppercase; }
-    .card-info .price { font-size: 0.9rem; font-weight: 700; }
+    .card-photo {
+        width: 100%; height: 100%; object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        display: block;
+    }
+    .card:hover .card-photo { transform: scale(1.05); }
+    .card-img-fallback {
+        position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-head); font-size: 4rem; font-weight: 800; color: rgba(255,255,255,0.06);
+    }
+    .tag {
+        position: absolute; top: 16px; left: 16px; background: rgba(0,0,0,0.8);
+        border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px);
+        color: #fff; font-size: 0.62rem; padding: 4px 8px; letter-spacing: 1.5px;
+        font-weight: 600; z-index: 3; text-transform: uppercase;
+    }
+    .card-info { padding: 20px 22px; display: flex; justify-content: space-between; align-items: flex-start; }
+    .card-info h3 { font-size: 0.95rem; letter-spacing: 0.5px; font-weight: 600; }
+    .card-info .cat { color: var(--muted); font-size: 0.68rem; letter-spacing: 1.5px; margin-top: 4px; text-transform: uppercase; }
+    .card-info .price { font-size: 0.95rem; font-weight: 700; font-variant-numeric: tabular-nums; }
     .add-btn {
         position: absolute; bottom: 0; left: 0; right: 0;
         background: #fff; color:#000; padding: 16px; text-align: center;
-        font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700;
-        transform: translateY(100%); transition: transform 0.4s ease; z-index: 2;
+        font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700;
+        transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); z-index: 2;
     }
     .card:hover .add-btn, .card:focus-within .add-btn { transform: translateY(0); }
 
     /* ===== Wishlist heart on card ===== */
     .heart-btn {
         position: absolute; top: 12px; right: 12px; z-index: 4;
-        background: none; border: none; cursor: pointer; padding: 6px;
-        font-size: 1rem; line-height: 1; color: rgba(255,255,255,0.55);
-        transition: transform 0.2s ease, color 0.2s ease;
+        background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.15);
+        backdrop-filter: blur(4px);
+        cursor: pointer; padding: 6px; width: 34px; height: 34px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1rem; line-height: 1; color: rgba(255,255,255,0.6);
+        transition: transform 0.2s ease, color 0.2s ease, background 0.2s;
     }
-    .heart-btn:hover { transform: scale(1.2); color: #fff; }
-    .heart-btn.active { color: #fff; }
+    .heart-btn:hover { transform: scale(1.1); color: #fff; background: rgba(0,0,0,0.8); }
+    .heart-btn.active { color: #ef4444; border-color: rgba(239,68,68,0.4); }
 
     /* ===== Quick-look hover hint ===== */
     .quicklook-hint {
-        position: absolute; top: 16px; right: 48px; z-index: 3;
-        font-size: 0.58rem; letter-spacing: 2px; text-transform: uppercase;
-        color: rgba(255,255,255,0.65); border: 1px solid rgba(255,255,255,0.2);
-        padding: 5px 9px; background: rgba(0,0,0,0.4);
-        opacity: 0; transform: translateY(-4px); transition: opacity 0.3s, transform 0.3s;
+        position: absolute; top: 16px; right: 54px; z-index: 3;
+        font-size: 0.58rem; letter-spacing: 1.5px; text-transform: uppercase;
+        color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.2);
+        padding: 5px 9px; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+        opacity: 0; transform: translateY(-4px); transition: opacity 0.2s, transform 0.2s;
         pointer-events: none;
     }
     .card:hover .quicklook-hint, .card:focus-within .quicklook-hint { opacity: 1; transform: translateY(0); }
+
+    /* ===== Checkout Modal Styles ===== */
+    .checkout-modal {
+        position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -46%);
+        background: #0d0d0f; border: 1px solid var(--line);
+        z-index: 2500; opacity: 0; pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: min(640px, 94vw); max-height: 90vh; overflow-y: auto;
+        padding: 36px;
+    }
+    .checkout-modal.open { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%); }
+    .checkout-head { margin-bottom: 24px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+    .checkout-head h3 { font-size: 1.25rem; font-weight: 800; }
+    .checkout-head p { color: var(--muted); font-size: 0.78rem; margin-top: 4px; }
+    .checkout-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .checkout-full { grid-column: 1 / -1; }
+    .checkout-input {
+        width: 100%; background: #141418; border: 1px solid var(--line);
+        color: #fff; padding: 12px 14px; font-family: var(--font-body); font-size: 0.82rem;
+        outline: none; transition: border-color 0.2s;
+    }
+    .checkout-input:focus { border-color: #fff; }
+    .checkout-label { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: block; }
+    .checkout-summary-box { background: #141418; border: 1px solid var(--line); padding: 18px; margin-top: 20px; font-size: 0.8rem; }
+    .checkout-row { display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--muted); }
+    .checkout-row.total { color: #fff; font-weight: 700; border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; font-size: 0.95rem; }
+    .checkout-submit-btn {
+        width: 100%; margin-top: 24px; background: #fff; color: #000; border: none;
+        padding: 16px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase;
+        font-size: 0.75rem; cursor: pointer; font-family: var(--font-body); transition: opacity 0.2s;
+    }
+    .checkout-submit-btn:hover { opacity: 0.9; }
+    .checkout-success-view { text-align: center; padding: 36px 12px; }
+    .checkout-check-badge {
+        width: 54px; height: 54px; border-radius: 50%; background: #fff; color: #000;
+        display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem;
+        font-weight: 800; margin-bottom: 20px;
+    }
 
     .feature { display: grid; grid-template-columns: 1fr 1fr; min-height: 80vh; }
     .feature-text { display: flex; flex-direction: column; justify-content: center; padding: 80px 60px; }
@@ -264,15 +313,238 @@
     .news-form button { background: #fff; color:#000; border: none; padding: 0 34px; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; cursor: pointer; transition: background 0.3s; font-family: var(--font-body); }
     .news-form button:hover { background: var(--muted); }
 
-    footer { border-top: 1px solid var(--line); padding: 70px 48px 40px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
-    .foot-brand .logo { font-size: 1.4rem; cursor: default; }
-    .foot-brand p { color: var(--muted); font-size: 0.8rem; margin-top: 18px; max-width: 260px; }
-    footer h4 { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; color:#fff; }
+    /* ===== Elevated Luxury Streetwear Footer ===== */
+    .site-footer {
+        border-top: 1px solid var(--line);
+        background: #08080a;
+        position: relative;
+        overflow: hidden;
+    }
+    .footer-pre {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255,255,255,0.015);
+    }
+    .footer-pre-item {
+        padding: 24px 28px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border-right: 1px solid var(--line);
+    }
+    .footer-pre-item:last-child { border-right: none; }
+    .footer-pre-icon {
+        width: 38px; height: 38px;
+        border: 1px solid var(--line);
+        background: #111115;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0; color: #fff;
+    }
+    .footer-pre-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; }
+    .footer-pre-text h5 {
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+        text-transform: uppercase; color: #fff; margin-bottom: 2px;
+    }
+    .footer-pre-text p {
+        font-size: 0.68rem; color: var(--muted); letter-spacing: 0.5px;
+    }
+
+    .footer-main {
+        padding: 70px 48px 40px;
+        display: grid;
+        grid-template-columns: 1.8fr 1.1fr 1.2fr 1.2fr 1.1fr;
+        gap: 40px;
+        position: relative;
+        z-index: 2;
+    }
+    .foot-brand { display: flex; flex-direction: column; }
+    .foot-brand-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .foot-brand-monogram {
+        width: 32px; height: 32px; background: #fff; display: flex;
+        align-items: center; justify-content: center;
+    }
+    .foot-brand-monogram svg { width: 22px; height: 22px; }
+    .foot-brand-title {
+        font-family: var(--font-head); font-size: 1.25rem; font-weight: 900;
+        letter-spacing: 2px; color: #fff; text-transform: uppercase;
+    }
+    .foot-brand p {
+        color: var(--muted); font-size: 0.8rem; line-height: 1.6;
+        max-width: 320px; margin-bottom: 24px;
+    }
+    .atelier-card {
+        background: #101014; border: 1px solid var(--line);
+        padding: 16px; max-width: 340px;
+    }
+    .atelier-status {
+        display: flex; align-items: center; gap: 8px;
+        font-size: 0.62rem; letter-spacing: 1.5px; font-weight: 700;
+        text-transform: uppercase; color: #fff; margin-bottom: 12px;
+    }
+    .pulse-dot {
+        width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+        box-shadow: 0 0 8px #22c55e;
+        animation: pulseGreen 2s infinite ease-in-out;
+    }
+    @keyframes pulseGreen {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    .atelier-clocks {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        border-top: 1px solid var(--line); padding-top: 10px;
+    }
+    .atelier-clock-item span.city {
+        font-size: 0.58rem; letter-spacing: 1.5px; color: var(--muted);
+        text-transform: uppercase; display: block;
+    }
+    .atelier-clock-item span.time {
+        font-family: var(--font-head); font-size: 0.85rem; font-weight: 700;
+        color: #fff; letter-spacing: 1px; font-variant-numeric: tabular-nums;
+    }
+    .atelier-coords {
+        margin-top: 8px; font-size: 0.58rem; letter-spacing: 1px; color: var(--muted);
+        font-family: monospace;
+    }
+
+    footer h4 {
+        font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase;
+        margin-bottom: 22px; color: #fff; font-weight: 800;
+        position: relative; display: inline-block;
+    }
+    footer h4::after {
+        content: ''; position: absolute; left: 0; bottom: -6px; width: 18px;
+        height: 1px; background: #fff;
+    }
     footer ul { list-style: none; }
     footer li { margin-bottom: 12px; }
-    footer a { color: var(--muted); text-decoration: none; font-size: 0.8rem; transition: color 0.3s; }
-    footer a:hover { color: #fff; }
-    .foot-bottom { grid-column: 1 / -1; border-top: 1px solid var(--line); margin-top: 30px; padding-top: 26px; display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 0.7rem; letter-spacing: 1px; }
+    .foot-link {
+        background: none; border: none; padding: 0; color: var(--muted);
+        font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 0.5px;
+        cursor: pointer; text-decoration: none; text-align: left;
+        display: inline-flex; align-items: center; gap: 6px;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .foot-link:hover { color: #fff; transform: translateX(3px); }
+    .foot-link .arrow { opacity: 0; font-size: 0.7rem; transition: opacity 0.2s ease; }
+    .foot-link:hover .arrow { opacity: 1; }
+
+    .foot-tag {
+        font-size: 0.58rem; background: rgba(255,255,255,0.08); color: #fff;
+        padding: 2px 6px; letter-spacing: 1px; margin-left: 6px; text-transform: uppercase;
+    }
+
+    .footer-news-box {
+        margin-top: 18px;
+    }
+    .footer-news-label {
+        font-size: 0.62rem; letter-spacing: 1.5px; color: var(--muted);
+        text-transform: uppercase; margin-bottom: 8px; display: block;
+    }
+    .footer-news-input-wrap {
+        display: flex; border: 1px solid var(--line);
+    }
+    .footer-news-input {
+        flex: 1; background: #111115; border: none; padding: 10px 12px;
+        color: #fff; font-family: var(--font-body); font-size: 0.75rem;
+        outline: none;
+    }
+    .footer-news-input:focus { background: #15151b; }
+    .footer-news-btn {
+        background: #fff; color: #000; border: none; padding: 0 16px;
+        font-family: var(--font-body); font-size: 0.65rem; font-weight: 800;
+        letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer;
+        transition: background 0.2s;
+    }
+    .footer-news-btn:hover { background: #d4d4d8; }
+
+    .payment-badges {
+        display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
+    }
+    .pay-badge {
+        padding: 5px 8px; background: #111115; border: 1px solid var(--line);
+        font-size: 0.62rem; letter-spacing: 1px; color: rgba(255,255,255,0.8);
+        font-weight: 700; text-transform: uppercase; font-family: var(--font-head);
+    }
+    .security-note {
+        font-size: 0.7rem; color: var(--muted); line-height: 1.5;
+    }
+
+    /* Giant architectural watermark */
+    .foot-watermark {
+        font-family: var(--font-head);
+        font-size: clamp(3rem, 11vw, 9.5rem);
+        font-weight: 900;
+        letter-spacing: -3px;
+        line-height: 0.8;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.04);
+        text-transform: uppercase;
+        user-select: none;
+        pointer-events: none;
+        padding: 10px 48px 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .foot-bottom {
+        border-top: 1px solid var(--line);
+        margin: 20px 48px 0;
+        padding: 24px 0 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    .foot-legal-links { display: flex; gap: 18px; flex-wrap: wrap; }
+    .foot-legal-btn {
+        background: none; border: none; padding: 0; color: var(--muted);
+        font-family: var(--font-body); font-size: 0.68rem; letter-spacing: 1.5px;
+        text-transform: uppercase; cursor: pointer; transition: color 0.2s;
+    }
+    .foot-legal-btn:hover { color: #fff; }
+    .foot-bottom-right { display: flex; align-items: center; gap: 18px; }
+
+    /* Modal dialog for Concierge & Legal info */
+    .info-modal {
+        position: fixed; top: 50%; left: 50%;
+        transform: translate(-50%, -46%);
+        background: #0d0d10; border: 1px solid var(--line);
+        z-index: 2500; opacity: 0; pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        width: min(720px, 94vw); max-height: 90vh; overflow-y: auto;
+        padding: 36px;
+    }
+    .info-modal.open { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%); }
+    .info-modal-tabs {
+        display: flex; gap: 8px; border-bottom: 1px solid var(--line);
+        padding-bottom: 16px; margin-bottom: 24px; overflow-x: auto;
+    }
+    .info-tab-btn {
+        background: transparent; border: 1px solid transparent; color: var(--muted);
+        font-family: var(--font-body); font-size: 0.68rem; letter-spacing: 1.5px;
+        text-transform: uppercase; font-weight: 700; padding: 8px 14px;
+        cursor: pointer; transition: all 0.2s ease; white-space: nowrap;
+    }
+    .info-tab-btn:hover { color: #fff; }
+    .info-tab-btn.active {
+        background: #fff; color: #000; border-color: #fff;
+    }
+    .info-tab-content { display: none; }
+    .info-tab-content.active { display: block; }
+    .info-tab-content h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; }
+    .info-tab-content p { color: var(--muted); font-size: 0.84rem; line-height: 1.6; margin-bottom: 16px; }
+    .info-qa-card {
+        background: #141418; border: 1px solid var(--line);
+        padding: 16px 20px; margin-bottom: 12px;
+    }
+    .info-qa-card h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; color: #fff; }
+    .info-qa-card p { font-size: 0.78rem; color: var(--muted); margin-bottom: 0; line-height: 1.5; }
 
     .cart-drawer { position: fixed; top: 0; right: -100%; width: 380px; max-width: 90vw; height: 100%; background: #0d0d0d; border-left: 1px solid var(--line); z-index: 2000; padding: 30px; transition: right 0.4s ease; display: flex; flex-direction: column; }
     .cart-drawer.open { right: 0; }
@@ -319,18 +591,18 @@
     }
     .pd-body { display: grid; grid-template-columns: 1.1fr 1fr; }
     .pd-main {
-        height: 460px; display: flex; align-items: center; justify-content: center;
-        position: relative; cursor: zoom-in; overflow: hidden;
+        height: 480px; display: flex; align-items: center; justify-content: center;
+        position: relative; cursor: zoom-in; overflow: hidden; background: #161619;
     }
-    .pd-num, .thumb-num { font-size: 5rem; font-weight: 900; color: rgba(255,255,255,0.07); font-family: var(--font-head); }
-    .pd-main .ghost-svg, .pd-thumb .ghost-svg { position: absolute; inset: 12%; width: 76%; height: 76%; }
-    .pd-thumbs { display: flex; gap: 4px; padding: 4px; }
+    .pd-main-img { width: 100%; height: 100%; object-fit: cover; }
+    .pd-thumbs { display: flex; gap: 6px; padding: 8px 0; }
     .pd-thumb {
-        flex: 1; height: 72px; border: 1px solid transparent; cursor: pointer;
+        flex: 1; height: 80px; border: 1px solid var(--line); cursor: pointer;
         display: flex; align-items: center; justify-content: center;
-        position: relative; overflow: hidden; background: none; padding: 0;
+        position: relative; overflow: hidden; background: #161619; padding: 0;
+        transition: border-color 0.2s ease;
     }
-    .pd-thumb .thumb-num { font-size: 1.1rem; }
+    .pd-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .pd-thumb.active { border-color: #fff; }
     .pd-info { padding: 40px 36px; }
     .pd-info .cat { color: var(--muted); font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; }
@@ -457,12 +729,21 @@
         .section { padding: 80px 24px; }
         .feature { grid-template-columns: 1fr; }
         .feature-visual { min-height: 40vh; font-size: 6rem; }
-        footer { grid-template-columns: 1fr 1fr; }
-        .foot-bottom { flex-direction: column; gap: 10px; }
+        .footer-pre { grid-template-columns: 1fr 1fr; }
+        .footer-pre-item:nth-child(2) { border-right: none; }
+        .footer-main { grid-template-columns: 1fr 1fr; padding: 50px 24px 30px; gap: 30px; }
+        .foot-brand { grid-column: 1 / -1; }
+        .foot-bottom { margin: 10px 24px 0; padding: 20px 0 28px; flex-direction: column; align-items: flex-start; gap: 14px; }
+        .foot-watermark { padding: 10px 24px 0; }
         .pd-body { grid-template-columns: 1fr; }
         .pd-main { height: 320px; }
         .lb-arrow { width: 42px; height: 42px; }
         .lb-prev { left: 2vw; } .lb-next { right: 2vw; }
+    }
+    @media (max-width: 560px) {
+        .footer-pre { grid-template-columns: 1fr; }
+        .footer-pre-item { border-right: none; border-bottom: 1px solid var(--line); }
+        .footer-main { grid-template-columns: 1fr; }
     }
 
     /* ===== Reduced motion: kill all animation & smooth scroll ===== */
@@ -506,12 +787,9 @@
 <main id="main">
 
 <section class="hero">
-    <div class="hero-bgtext">GHOSTNAME WORLDWIDE</div>
-    <!-- Maintenance-shell ghost mark: subtle placeholder art, never empty -->
-    <div class="hero-ghost" id="heroGhost" aria-hidden="true"></div>
     <div class="hero-content">
-        <h1>GHOSTNAME</h1>
-        <div class="sub">GHOSTNAMEWORLDWIDE · Anonymous by design · Worn worldwide</div>
+        <h1>GHOSTNAME WORLDWIDE</h1>
+        <div class="sub">Inaugural FW26 Drop · Anonymous Cut · Heavyweight Fabric</div>
         <a href="#shop" class="cta">Explore Collection</a>
     </div>
     <div class="scroll-hint">SCROLL ↓</div>
@@ -520,15 +798,26 @@
 <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
         <span>NEW DROP FW26·</span><span>FREE WORLDWIDE SHIPPING OVER $150·</span>
-        <span>LIMITED RUN·</span><span>NEW DROP FW26·</span>
-        <span>FREE WORLDWIDE SHIPPING OVER $150·</span><span>LIMITED RUN·</span>
+        <span>LIMITED 500-PIECE RUN·</span><span>NEW DROP FW26·</span>
+        <span>FREE WORLDWIDE SHIPPING OVER $150·</span><span>LIMITED 500-PIECE RUN·</span>
     </div>
 </div>
 
 <section class="section" id="shop">
     <div class="section-head">
-        <h2>Featured Drop</h2>
-        <span>FW26 · 06 PIECES</span>
+        <div>
+            <h2>Featured Drop</h2>
+            <span class="meta">FW26 COLLECTION · 06 CURATED PIECES</span>
+        </div>
+        <div class="section-head-right">
+            <div class="filter-tabs" role="tablist" aria-label="Filter products by category">
+                <button class="filter-btn active" onclick="setCategory('All', this)">All</button>
+                <button class="filter-btn" onclick="setCategory('Outerwear', this)">Outerwear</button>
+                <button class="filter-btn" onclick="setCategory('Tops', this)">Tops</button>
+                <button class="filter-btn" onclick="setCategory('Bottoms', this)">Bottoms</button>
+                <button class="filter-btn" onclick="setCategory('Accessories', this)">Accessories</button>
+            </div>
+        </div>
     </div>
     <div class="grid" id="productGrid"></div>
 </section>
@@ -536,10 +825,12 @@
 <section class="feature" id="about">
     <div class="feature-text">
         <h2>Faceless.<br>Fearless.<br>Forever.</h2>
-        <p>GHOSTNAME WORLDWIDE is built for those who move in silence. Every piece is cut from premium heavyweight fabric, produced in limited runs, and designed to outlast the trend cycle. No logos screaming for attention — just quality that speaks for itself.</p>
-        <a href="#">Read Our Story →</a>
+        <p>GHOSTNAME WORLDWIDE is built for those who move in silence. Every garment is crafted from 500 GSM French terry cotton or high-density technical twill, dyed in small Japanese batch baths, and cut with exaggerated drop-shoulders. No overt logos, no disposable trends — pure structural weight.</p>
+        <a href="#collection">Explore Selected Works →</a>
     </div>
-    <div class="feature-visual">GW</div>
+    <div class="feature-visual" style="background: url('/src/assets/images/hero_streetwear_fw26_1790379228007.jpg') center/cover no-repeat; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(9,9,11,0.4);"></div>
+    </div>
 </section>
 
 <section class="section" id="collection">
@@ -571,43 +862,174 @@
 
 </main>
 
-<footer>
-    <div class="foot-brand">
-        <div class="logo">GHOSTNAME®</div>
-        <p>Premium anonymous streetwear. Designed globally, worn worldwide. Est. 2026.</p>
+<footer class="site-footer">
+    <!-- Reassurance strip -->
+    <div class="footer-pre">
+        <div class="footer-pre-item">
+            <div class="footer-pre-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+            </div>
+            <div class="footer-pre-text">
+                <h5>Worldwide Courier</h5>
+                <p>DHL & FedEx Express tracked to 120+ nations</p>
+            </div>
+        </div>
+        <div class="footer-pre-item">
+            <div class="footer-pre-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                </svg>
+            </div>
+            <div class="footer-pre-text">
+                <h5>Customs Pre-Cleared</h5>
+                <p>All taxes & import tariffs fully covered</p>
+            </div>
+        </div>
+        <div class="footer-pre-item">
+            <div class="footer-pre-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                    <rect x="1" y="3" width="22" height="5"></rect>
+                    <line x1="10" y1="12" x2="14" y2="12"></line>
+                </svg>
+            </div>
+            <div class="footer-pre-text">
+                <h5>14-Day Vault Returns</h5>
+                <p>Complimentary return label & portal</p>
+            </div>
+        </div>
+        <div class="footer-pre-item">
+            <div class="footer-pre-icon">
+                <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 4.24 4.24"></path>
+                    <path d="m14.83 9.17 4.24-4.24"></path>
+                    <path d="m14.83 14.83 4.24 4.24"></path>
+                    <path d="m9.17 14.83-4.24 4.24"></path>
+                    <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+            </div>
+            <div class="footer-pre-text">
+                <h5>500 GSM Heavyweight</h5>
+                <p>Small-batch Japanese mill construction</p>
+            </div>
+        </div>
     </div>
-    <div>
-        <h4>Shop</h4>
-        <ul>
-            <li><a href="#shop">New Arrivals</a></li>
-            <li><a href="#shop">Tops</a></li>
-            <li><a href="#shop">Outerwear</a></li>
-            <li><a href="#shop">Accessories</a></li>
-        </ul>
+
+    <!-- Main Footer Grid -->
+    <div class="footer-main">
+        <!-- Col 1: Brand & Atelier Hub -->
+        <div class="foot-brand">
+            <div class="foot-brand-head">
+                <div class="foot-brand-monogram" aria-hidden="true">
+                    <svg viewBox="0 0 200 200" fill="none" stroke="#000" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M 138,58 A 52,52 0 1 0 138,142 L 138,104 L 108,104"/>
+                        <path d="M 62,72 L 82,148 L 100,104 L 118,148 L 138,72"/>
+                    </svg>
+                </div>
+                <div class="foot-brand-title">GHOSTNAME®</div>
+            </div>
+            <p>Premium anonymous streetwear. Heavyweight fabrics, boxy cuts, produced in strictly limited 500-unit archival drops. Designed in Tokyo, distributed worldwide.</p>
+            
+            <div class="atelier-card">
+                <div class="atelier-status">
+                    <span class="pulse-dot"></span>
+                    <span>Atelier Dispatch · Active</span>
+                </div>
+                <div class="atelier-clocks">
+                    <div class="atelier-clock-item">
+                        <span class="city">Tokyo Atelier</span>
+                        <span class="time" id="clockTokyo">--:--:-- JST</span>
+                    </div>
+                    <div class="atelier-clock-item">
+                        <span class="city">New York Vault</span>
+                        <span class="time" id="clockNYC">--:--:-- EDT</span>
+                    </div>
+                </div>
+                <div class="atelier-coords">35.6764° N, 139.6500° E // SHIBUYA-KU, TOKYO</div>
+            </div>
+        </div>
+
+        <!-- Col 2: Shop & Archive -->
+        <div>
+            <h4>Archive & Drops</h4>
+            <ul>
+                <li><button class="foot-link" onclick="quickNavCategory('All')"><span class="arrow">→</span> FW26 Full Drop <span class="foot-tag">New</span></button></li>
+                <li><button class="foot-link" onclick="quickNavCategory('Outerwear')"><span class="arrow">→</span> Outerwear & Twill</button></li>
+                <li><button class="foot-link" onclick="quickNavCategory('Tops')"><span class="arrow">→</span> Tops & Boxy Tees</button></li>
+                <li><button class="foot-link" onclick="quickNavCategory('Bottoms')"><span class="arrow">→</span> Cargoes & Pants</button></li>
+                <li><button class="foot-link" onclick="quickNavCategory('Accessories')"><span class="arrow">→</span> Merino Knitwear</button></li>
+                <li><a href="#collection" class="foot-link"><span class="arrow">→</span> The Archive (Vault)</a></li>
+            </ul>
+        </div>
+
+        <!-- Col 3: Concierge & Care -->
+        <div>
+            <h4>Client Concierge</h4>
+            <ul>
+                <li><button class="foot-link" onclick="openInfoModal('shipping')"><span class="arrow">→</span> Shipping & Transit</button></li>
+                <li><button class="foot-link" onclick="openInfoModal('returns')"><span class="arrow">→</span> Vault Returns (14-Day)</button></li>
+                <li><button class="foot-link" onclick="openInfoModal('faq')"><span class="arrow">→</span> Garment Care & FAQ</button></li>
+                <li><button class="foot-link" onclick="openSizeGuide()"><span class="arrow">→</span> Size & Fit Matrix</button></li>
+                <li><button class="foot-link" onclick="trackOrderPrompt()"><span class="arrow">→</span> Track Dispatch</button></li>
+                <li><button class="foot-link" onclick="openInfoModal('sourcing')"><span class="arrow">→</span> Fabric Craftsmanship</button></li>
+            </ul>
+        </div>
+
+        <!-- Col 4: Community & Network -->
+        <div>
+            <h4>Archive Network</h4>
+            <ul>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener" class="foot-link"><span class="arrow">→</span> Instagram <span class="foot-tag">@ghostnameworldwide</span></a></li>
+                <li><a href="https://tiktok.com" target="_blank" rel="noopener" class="foot-link"><span class="arrow">→</span> TikTok <span class="foot-tag">@ghostname</span></a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener" class="foot-link"><span class="arrow">→</span> Twitter / X <span class="foot-tag">@ghostname_ww</span></a></li>
+                <li><a href="https://discord.com" target="_blank" rel="noopener" class="foot-link"><span class="arrow">→</span> Discord <span class="foot-tag">Private Vault</span></a></li>
+            </ul>
+            <div class="footer-news-box">
+                <span class="footer-news-label">FW26 Drop Alert</span>
+                <form class="footer-news-input-wrap" onsubmit="joinFooterList(event)">
+                    <input class="footer-news-input" type="email" placeholder="YOUR EMAIL" required aria-label="Drop alert email">
+                    <button class="footer-news-btn" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Col 5: Payment & Authenticity -->
+        <div>
+            <h4>Authenticity</h4>
+            <div class="payment-badges" aria-label="Accepted Payment Methods">
+                <span class="pay-badge">Apple Pay</span>
+                <span class="pay-badge">Google Pay</span>
+                <span class="pay-badge">Visa</span>
+                <span class="pay-badge">Mastercard</span>
+                <span class="pay-badge">Amex</span>
+                <span class="pay-badge">USDC</span>
+            </div>
+            <p class="security-note">256-Bit Encrypted Atelier Gateway. Every drop includes a cryptographically verifiable provenance certificate.</p>
+        </div>
     </div>
-    <div>
-        <h4>Info</h4>
-        <ul>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#" onclick="openSizeGuide(); return false;" aria-haspopup="dialog">Size Guide</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-    </div>
-    <div>
-        <h4>Social</h4>
-        <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">Twitter / X</a></li>
-            <li><a href="#">Discord</a></li>
-        </ul>
-    </div>
+
+    <!-- Giant Architectural Watermark -->
+    <div class="foot-watermark" aria-hidden="true">GHOSTNAME WORLDWIDE</div>
+
+    <!-- Bottom sub-bar -->
     <div class="foot-bottom">
-        <span>© 2026 GHOSTNAME WORLDWIDE. All rights reserved.</span>
-        <span>PRIVACY · TERMS · COOKIES</span>
-        <!-- Easter egg: rotates every page load -->
-        <span id="madeWith">Made with intent in <span id="eggCity">—</span></span>
+        <div>© 2026 GHOSTNAME WORLDWIDE S.A. ALL RIGHTS RESERVED.</div>
+        <div class="foot-legal-links">
+            <button class="foot-legal-btn" onclick="openInfoModal('privacy')">Privacy Policy</button>
+            <button class="foot-legal-btn" onclick="openInfoModal('terms')">Terms of Sale</button>
+            <button class="foot-legal-btn" onclick="openInfoModal('cookies')">Cookie Preferences</button>
+            <button class="foot-legal-btn" onclick="openInfoModal('sourcing')">Ethical Production</button>
+        </div>
+        <div class="foot-bottom-right">
+            <span id="madeWith">Made with intent in <span id="eggCity">—</span></span>
+        </div>
     </div>
 </footer>
 
@@ -693,6 +1115,184 @@
     </table>
 </div>
 
+<!-- ===== Checkout Modal ===== -->
+<div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+    <button class="modal-close" onclick="closeCheckout()" aria-label="Close checkout">✕</button>
+    <div id="checkoutFormView">
+        <div class="checkout-head">
+            <h3 id="coTitle">Express Checkout</h3>
+            <p>Direct worldwide dispatch from Tokyo atelier. Insured courier delivery.</p>
+        </div>
+        <form onsubmit="submitCheckout(event)">
+            <div class="checkout-form-grid">
+                <div class="checkout-full">
+                    <label class="checkout-label" for="coEmail">Email Address</label>
+                    <input class="checkout-input" type="email" id="coEmail" required placeholder="name@domain.com">
+                </div>
+                <div>
+                    <label class="checkout-label" for="coFirstName">First Name</label>
+                    <input class="checkout-input" type="text" id="coFirstName" required placeholder="Alex">
+                </div>
+                <div>
+                    <label class="checkout-label" for="coLastName">Last Name</label>
+                    <input class="checkout-input" type="text" id="coLastName" required placeholder="Vance">
+                </div>
+                <div class="checkout-full">
+                    <label class="checkout-label" for="coAddress">Shipping Address</label>
+                    <input class="checkout-input" type="text" id="coAddress" required placeholder="104 Shibuya Crossing">
+                </div>
+                <div>
+                    <label class="checkout-label" for="coCity">City</label>
+                    <input class="checkout-input" type="text" id="coCity" required placeholder="Tokyo">
+                </div>
+                <div>
+                    <label class="checkout-label" for="coPostal">Postal / Zip Code</label>
+                    <input class="checkout-input" type="text" id="coPostal" required placeholder="150-0002">
+                </div>
+                <div class="checkout-full">
+                    <label class="checkout-label" for="coPayment">Payment Method</label>
+                    <select class="checkout-input" id="coPayment">
+                        <option value="card">Credit Card (Visa / Mastercard / Amex)</option>
+                        <option value="apple">Apple Pay / Google Pay</option>
+                        <option value="cod">Cash on Delivery (COD) / Verified</option>
+                        <option value="crypto">USDC / Crypto Dispatch</option>
+                    </select>
+                </div>
+            </div>
+            <div class="checkout-summary-box">
+                <div class="checkout-row"><span>Items (<span id="coItemCount">0</span>)</span><span id="coSubtotal">$0</span></div>
+                <div class="checkout-row"><span>Worldwide Express Shipping</span><span>FREE</span></div>
+                <div class="checkout-row total"><span>Total Due</span><span id="coTotal">$0</span></div>
+            </div>
+            <button type="submit" class="checkout-submit-btn">Authorize Order & Dispatch</button>
+        </form>
+    </div>
+    <div id="checkoutSuccessView" class="checkout-success-view" style="display: none;">
+        <div class="checkout-check-badge">✓</div>
+        <h3>Order Confirmed</h3>
+        <p style="color:var(--muted); font-size: 0.85rem; margin-top: 10px;" id="coConfirmMsg">Order #GW-8942 has been placed. Dispatch tracking details sent to your email.</p>
+        <div class="checkout-summary-box" style="text-align: left; margin: 24px 0;">
+            <div class="checkout-row"><span>Status</span><span style="color:#fff; font-weight: 600;">Processing & Insured Pack</span></div>
+            <div class="checkout-row"><span>Estimated Arrival</span><span style="color:#fff;">3–5 Business Days</span></div>
+        </div>
+        <button class="checkout-submit-btn" onclick="finishCheckout()">Return to Storefront</button>
+    </div>
+</div>
+
+<!-- ===== Client Concierge & Legal Info Modal ===== -->
+<div class="info-modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <button class="modal-close" onclick="closeInfoModal()" aria-label="Close concierge dialog">✕</button>
+    <div class="info-modal-tabs" role="tablist">
+        <button class="info-tab-btn active" id="tabBtnShipping" onclick="switchInfoTab('shipping')">Shipping</button>
+        <button class="info-tab-btn" id="tabBtnReturns" onclick="switchInfoTab('returns')">Returns</button>
+        <button class="info-tab-btn" id="tabBtnFaq" onclick="switchInfoTab('faq')">Care & FAQ</button>
+        <button class="info-tab-btn" id="tabBtnPrivacy" onclick="switchInfoTab('privacy')">Privacy</button>
+        <button class="info-tab-btn" id="tabBtnTerms" onclick="switchInfoTab('terms')">Terms</button>
+        <button class="info-tab-btn" id="tabBtnSourcing" onclick="switchInfoTab('sourcing')">Craft</button>
+    </div>
+
+    <!-- Tab 1: Shipping -->
+    <div class="info-tab-content active" id="tabShipping">
+        <h3 id="infoModalTitle">Worldwide Express Shipping</h3>
+        <p>All GHOSTNAME WORLDWIDE orders are packed in insured, tamper-evident matte black boxes and dispatched directly from our Tokyo distribution atelier.</p>
+        <div class="info-qa-card">
+            <h4>Complimentary Courier Dispatch</h4>
+            <p>Orders exceeding $150 USD qualify for free priority shipping. Under $150, flat-rate courier dispatch is calculated based on destination.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Transit Estimates</h4>
+            <p>• Japan & East Asia: 1–2 business days via Yamato Transport<br>
+               • North America (US & Canada): 2–3 business days via DHL Express Priority<br>
+               • Europe & United Kingdom: 3–4 business days via FedEx International<br>
+               • Rest of World: 3–5 business days via DHL Global Express</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Duties & Tariffs</h4>
+            <p>DDP (Delivery Duty Paid): All international customs, duties, and local clearance tariffs are pre-calculated and covered by GHOSTNAME. No unexpected charges at your door.</p>
+        </div>
+    </div>
+
+    <!-- Tab 2: Returns -->
+    <div class="info-tab-content" id="tabReturns">
+        <h3>14-Day Vault Returns Policy</h3>
+        <p>Because every GHOSTNAME release is strictly limited to 500 numbered units, we uphold a meticulous 14-day archival condition standard.</p>
+        <div class="info-qa-card">
+            <h4>Eligibility Standards</h4>
+            <p>Items must be in unworn, unwashed condition with the tamper-evident woven security loop intact, alongside all original dust bags and heavy-gauge hangtags.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Return Portal Process</h4>
+            <p>Initiate your return by clicking "Track Dispatch" or reaching concierge@ghostnameworldwide.com. A prepaid return DHL airway bill will be generated immediately.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Exchange & Vault Credit</h4>
+            <p>If sizing needs adjustment and inventory allows, an exchange will be prioritized immediately. Alternatively, a 100% refund is processed to the original payment method within 48 hours of inspection.</p>
+        </div>
+    </div>
+
+    <!-- Tab 3: Care & FAQ -->
+    <div class="info-tab-content" id="tabFaq">
+        <h3>Garment Care & Archive FAQ</h3>
+        <div class="info-qa-card">
+            <h4>What makes GHOSTNAME fabric distinct?</h4>
+            <p>Our hoodies and boxy tees are milled from 500 GSM loopback French terry and 320 GSM combed jersey cotton in Wakayama, Japan, using vintage sinker-wheel machines that preserve natural yarn elasticity.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>How do the garments fit?</h4>
+            <p>Pieces feature a wide, dropped-shoulder boxy drape with a slightly cropped hemline. We recommend selecting your true size for the intended oversized architectural fit, or sizing down one for a closer profile.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Are sold-out archive pieces ever restocked?</h4>
+            <p>Never. Each collection is produced in a single run of 500 pieces per style. Once an item enters "SOLD OUT" status in the Archive, the pattern is permanently retired to ensure collector scarcity.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Recommended Washing & Longevity</h4>
+            <p>Turn garment inside out. Machine wash on delicate cold cycle (max 30°C / 85°F). Flat air dry in shaded breeze. Never tumble dry or bleach. Iron low on reverse.</p>
+        </div>
+    </div>
+
+    <!-- Tab 4: Privacy -->
+    <div class="info-tab-content" id="tabPrivacy">
+        <h3>Privacy & Anonymous Data Standard</h3>
+        <p>In accordance with our faceless ethos, GHOSTNAME WORLDWIDE practices strict minimal telemetry.</p>
+        <div class="info-qa-card">
+            <h4>Zero Ad Trackers or Third-Party Pixels</h4>
+            <p>We do not operate Meta pixels, TikTok tracking beacons, or cross-site data broker integrations. Your browsing trail and wishlist remain strictly on your local device.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Transactional Integrity</h4>
+            <p>Shipping addresses and payment tokens are encrypted using AES-256 and stored strictly for courier manifest compliance and legal tax retention.</p>
+        </div>
+    </div>
+
+    <!-- Tab 5: Terms -->
+    <div class="info-tab-content" id="tabTerms">
+        <h3>Terms of Sale & Authenticity</h3>
+        <div class="info-qa-card">
+            <h4>Limited Purchase Allocations</h4>
+            <p>To prevent automated bot bulk-buying, orders are capped at 2 units per style per client. Suspected reseller bot traffic is flagged and canceled automatically.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Intellectual Property & Provenance</h4>
+            <p>GHOSTNAME®, the GW Monogram, and Faceless. Fearless. Forever.™ are registered trademarks. Unauthorized reproduction is strictly prohibited.</p>
+        </div>
+    </div>
+
+    <!-- Tab 6: Sourcing -->
+    <div class="info-tab-content" id="tabSourcing">
+        <h3>Ethical Production & Material Craft</h3>
+        <p>We build clothing to endure decades, not weeks. Our production footprint is small, deliberate, and carbon-offset.</p>
+        <div class="info-qa-card">
+            <h4>Raw Material Standards</h4>
+            <p>100% GOTS-certified organic cotton, mulesing-free New Zealand merino wool, and OEKO-TEX Standard 100 non-toxic reactive dyes.</p>
+        </div>
+        <div class="info-qa-card">
+            <h4>Fair Living Wage Atelier Partners</h4>
+            <p>All sewing and finishing occurs in specialized boutique facilities in Tokyo, Okayama, and Porto where craftspeople receive double living wages and comprehensive pension coverage.</p>
+        </div>
+    </div>
+</div>
+
 <!-- ===== Cookie consent ===== -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
     <p>This site uses cookies to remember your cart, wishlist and preferences. No tracking. No noise.</p>
@@ -712,20 +1312,21 @@
    Cart / wishlist / currency / recently-viewed persist in localStorage.
    ============================================================ */
 const products = [
-    { id: "p1", name: "Phantom Heavyweight Hoodie", cat: "Outerwear",   price: 145, tag: "NEW",     initial: "01" },
-    { id: "p2", name: "Void Boxy Tee",              cat: "Tops",        price: 68,  tag: "",        initial: "02" },
-    { id: "p3", name: "Shadow Cargo Pants",         cat: "Bottoms",     price: 120, tag: "NEW",     initial: "03" },
-    { id: "p4", name: "Eclipse Bomber Jacket",      cat: "Outerwear",   price: 210, tag: "",        initial: "04" },
-    { id: "p5", name: "Ghost Knit Beanie",          cat: "Accessories", price: 42,  tag: "",        initial: "05" },
-    { id: "p6", name: "Anon Zip Vest",              cat: "Outerwear",   price: 98,  tag: "LIMITED", initial: "06" },
+    { id: "p1", name: "Phantom Heavyweight Hoodie", cat: "Outerwear", price: 145, tag: "NEW", fabric: "500 GSM French Terry", img: "/src/assets/images/product_phantom_hoodie_1790379242145.jpg", initial: "01" },
+    { id: "p2", name: "Void Boxy Tee",              cat: "Tops",      price: 68,  tag: "",    fabric: "320 GSM Combed Cotton", img: "/src/assets/images/product_void_tee_1790379252763.jpg", initial: "02" },
+    { id: "p3", name: "Shadow Cargo Pants",         cat: "Bottoms",   price: 120, tag: "NEW", fabric: "Technical Ripstop",     img: "/src/assets/images/product_cargo_pants_1790379263399.jpg", initial: "03" },
+    { id: "p4", name: "Eclipse Bomber Jacket",      cat: "Outerwear", price: 210, tag: "",    fabric: "Bonded Heavy Twill",    img: "/src/assets/images/product_bomber_jacket_1790379273617.jpg", initial: "04" },
+    { id: "p5", name: "Ghost Knit Beanie",          cat: "Accessories", price: 42, tag: "",   fabric: "100% Merino Wool",      img: "/src/assets/images/product_knit_beanie_1790379290197.jpg", initial: "05" },
+    { id: "p6", name: "Anon Zip Vest",              cat: "Outerwear", price: 98,  tag: "LIMITED", fabric: "Modular Cordura",   img: "/src/assets/images/product_zip_vest_1790379301258.jpg", initial: "06" },
 ];
 const archive = [
-    { id: "a1", name: "Spectre Longsleeve",  cat: "Tops",      price: 78,  tag: "SOLD OUT", initial: "A1" },
-    { id: "a2", name: "Mirage Trackpants",   cat: "Bottoms",   price: 110, tag: "",         initial: "A2" },
-    { id: "a3", name: "Wraith Overshirt",    cat: "Outerwear", price: 165, tag: "SOLD OUT", initial: "A3" },
+    { id: "a1", name: "Spectre Longsleeve",  cat: "Tops",      price: 78,  tag: "SOLD OUT", fabric: "300 GSM Interlock",   img: "/src/assets/images/product_void_tee_1790379252763.jpg", initial: "A1" },
+    { id: "a2", name: "Mirage Trackpants",   cat: "Bottoms",   price: 110, tag: "",         fabric: "Heavy Double Knit",   img: "/src/assets/images/product_cargo_pants_1790379263399.jpg", initial: "A2" },
+    { id: "a3", name: "Wraith Overshirt",    cat: "Outerwear", price: 165, tag: "SOLD OUT", fabric: "Dense Moleskin",      img: "/src/assets/images/product_bomber_jacket_1790379273617.jpg", initial: "A3" },
 ];
 const ALL = [...products, ...archive];
 const SIZES = ["S", "M", "L", "XL"];
+let activeCategory = "All";
 
 /* Currency: fixed DEMO rates (not live FX). JPY renders with 0 decimals. */
 const RATES   = { USD: 1, EUR: 0.92, GBP: 0.79, JPY: 157 }; // demo rates
@@ -744,7 +1345,7 @@ function fmt(usd) {
     }).format(v);
 }
 
-/* Subtle ghost SVG used as placeholder art (hero shell, gallery, lightbox) */
+/* Subtle ghost SVG used as placeholder art if needed */
 function ghostSVG(cls) {
     return `<svg class="ghost-svg ${cls || ''}" viewBox="0 0 100 120" aria-hidden="true">
         <path d="M50 4C26 4 12 24 12 48v64l12-10 12 10 14-11 14 11 12-10 12 10V48C88 24 74 4 50 4z"/>
@@ -758,30 +1359,41 @@ function ghostSVG(cls) {
    ============================================================ */
 function renderGrid(list, target) {
     const grid = document.getElementById(target);
+    if (!grid) return;
     grid.innerHTML = list.map(p => `
         <div class="card" data-id="${p.id}" tabindex="0" role="button"
              aria-label="${p.name} — view details"
              onclick="openProduct('${p.id}')"
              onkeydown="if(event.key==='Enter')openProduct('${p.id}')">
-            <div class="card-img ${gradClass(p)}">
+            <div class="card-img">
                 ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
                 <span class="quicklook-hint">Quick look +</span>
-                ${p.initial}
+                <img class="card-photo" src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="card-img-fallback" style="display:none;">${p.initial}</div>
                 <button class="heart-btn ${wishlist.has(p.id) ? 'active' : ''}" aria-label="Toggle wishlist for ${p.name}"
                         onclick="toggleWish('${p.id}', event)">♥</button>
                 ${p.tag !== 'SOLD OUT'
                     ? `<div class="add-btn" onclick="addToCart('${p.name}',${p.price},1,event)">Add to Cart — ${fmt(p.price)}</div>`
-                    : `<div class="add-btn" style="background:#222;color:#888;cursor:not-allowed;">Sold Out</div>`}
+                    : `<div class="add-btn" style="background:#18181b;color:#71717a;cursor:not-allowed;">Sold Out</div>`}
             </div>
             <div class="card-info">
                 <div>
                     <h3>${p.name}</h3>
-                    <div class="cat">${p.cat}</div>
+                    <div class="cat">${p.cat} · ${p.fabric || 'Heavyweight'}</div>
                 </div>
                 <div class="price">${fmt(p.price)}</div>
             </div>
         </div>
     `).join("");
+}
+
+function setCategory(cat, btn) {
+    activeCategory = cat;
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    if (btn) btn.classList.add("active");
+    const filtered = cat === "All" ? products : products.filter(p => p.cat === cat);
+    renderGrid(filtered, "productGrid");
+    observeCards();
 }
 function gradClass(p) { return "grad-" + (p.id.charCodeAt(p.id.length - 1) % 4); }
 
@@ -859,7 +1471,37 @@ function toggleCart() {
 
 function checkout() {
     if (cart.length === 0) { toast("Your cart is empty."); return; }
-    toast("Demo checkout — connect Stripe / Shopify to go live.");
+    if (document.getElementById("cartDrawer").classList.contains("open")) toggleCart();
+    const total = cart.reduce((s, c) => s + c.price * c.qty, 0);
+    const count = cart.reduce((s, c) => s + c.qty, 0);
+    document.getElementById("coItemCount").textContent = count;
+    document.getElementById("coSubtotal").textContent = fmt(total);
+    document.getElementById("coTotal").textContent = fmt(total);
+    document.getElementById("checkoutFormView").style.display = "block";
+    document.getElementById("checkoutSuccessView").style.display = "none";
+    openModal("checkoutModal");
+}
+
+function closeCheckout() {
+    document.getElementById("checkoutModal").classList.remove("open");
+    document.getElementById("modalOverlay").classList.remove("show");
+}
+
+function submitCheckout(e) {
+    e.preventDefault();
+    const email = document.getElementById("coEmail").value;
+    const orderNum = "GW-" + Math.floor(1000 + Math.random() * 9000);
+    document.getElementById("coConfirmMsg").textContent = `Order #${orderNum} confirmed. Tracking and customs dispatch details sent to ${email}.`;
+    document.getElementById("checkoutFormView").style.display = "none";
+    document.getElementById("checkoutSuccessView").style.display = "block";
+    cart = [];
+    saveCart();
+    updateCart();
+}
+
+function finishCheckout() {
+    closeCheckout();
+    toast("Thank you for choosing GHOSTNAME WORLDWIDE.");
 }
 
 function joinList(e) {
@@ -873,8 +1515,6 @@ function joinList(e) {
    ============================================================ */
 let pd = null, pdSize = "M", pdQtyVal = 1, pdView = 0;
 
-function views(p) { return [0, 1, 2, 3].map(i => ({ ...p, initial: p.initial + "·0" + (i + 1) })); }
-
 function openProduct(id) {
     pd = ALL.find(p => p.id === id);
     if (!pd) return;
@@ -884,19 +1524,19 @@ function openProduct(id) {
     localStorage.setItem("gn_recent", JSON.stringify(recent));
     renderRecent(); observeCards();
 
-    document.getElementById("pdCat").textContent = pd.cat + (pd.tag ? " · " + pd.tag : "");
+    document.getElementById("pdCat").textContent = pd.cat + (pd.fabric ? " · " + pd.fabric : "") + (pd.tag ? " · " + pd.tag : "");
     document.getElementById("pdName").textContent = pd.name;
+    document.getElementById("pdPrice").textContent = fmt(pd.price);
     document.getElementById("pdDesc").textContent =
-        "Premium heavyweight construction, boxy anonymous cut. Limited run — produced once, never restocked. Designed to outlast the trend cycle.";
+        "Cut from " + (pd.fabric || "heavyweight 500 GSM Japanese cotton") + ". Boxy dropped-shoulder fit with reinforced double-needle stitching. Produced in a limited 500-unit atelier run.";
     document.getElementById("pdAdd").disabled = pd.tag === "SOLD OUT";
     document.getElementById("pdAdd").textContent = pd.tag === "SOLD OUT" ? "Sold Out" : "Add to Cart";
 
-    /* gallery: main stage + 4 thumbnails, all programmatic placeholder art */
-    const vs = views(pd);
+    /* gallery: main stage + thumbnails */
     const thumbs = document.getElementById("pdThumbs");
-    thumbs.innerHTML = vs.map((v, i) =>
-        `<button class="pd-thumb ${i === 0 ? 'active' : ''} ${gradClass(pd)}" onclick="pdSetView(${i})" aria-label="View image ${i + 1}">
-            ${ghostSVG()}<span class="thumb-num">${v.initial}</span>
+    thumbs.innerHTML = [0, 1, 2].map((_, i) =>
+        `<button class="pd-thumb ${i === 0 ? 'active' : ''}" onclick="pdSetView(${i})" aria-label="View angle ${i + 1}">
+            <img src="${pd.img}" alt="${pd.name}">
         </button>`).join("");
     pdPaintMain();
 
@@ -910,7 +1550,9 @@ function openProduct(id) {
     const rel = ALL.filter(p => p.id !== id).slice(0, 3);
     document.getElementById("relatedStrip").innerHTML = rel.map(r =>
         `<button class="related-item" onclick="openProduct('${r.id}')">
-            <div class="r-num">${r.initial}</div>
+            <div style="height:60px; overflow:hidden; margin-bottom:8px; background:#161619;">
+                <img src="${r.img}" alt="${r.name}" style="width:100%; height:100%; object-fit:cover;">
+            </div>
             <h5>${r.name}</h5>
             <div class="r-price">${fmt(r.price)}</div>
         </button>`).join("");
@@ -919,10 +1561,8 @@ function openProduct(id) {
 }
 
 function pdPaintMain() {
-    const vs = views(pd);
     const main = document.getElementById("pdMain");
-    main.className = "pd-main " + gradClass(pd);
-    main.innerHTML = ghostSVG() + `<span class="pd-num">${vs[pdView].initial}</span>`;
+    main.innerHTML = `<img class="pd-main-img" src="${pd.img}" alt="${pd.name}">`;
 }
 function pdSetView(i) {
     pdView = i;
@@ -959,6 +1599,8 @@ function openModal(id) {
 function closeModal() {
     document.getElementById("pdModal").classList.remove("open");
     document.getElementById("sizeModal").classList.remove("open");
+    document.getElementById("checkoutModal").classList.remove("open");
+    document.getElementById("infoModal").classList.remove("open");
     document.getElementById("modalOverlay").classList.remove("show");
 }
 function overlayClick() { closeModal(); }
@@ -966,22 +1608,73 @@ function overlayClick() { closeModal(); }
 function openSizeGuide() { openModal("sizeModal"); }
 function closeSizeGuide() { closeModal(); }
 
+function openInfoModal(tab) {
+    if (tab) switchInfoTab(tab);
+    openModal("infoModal");
+}
+function closeInfoModal() {
+    document.getElementById("infoModal").classList.remove("open");
+    document.getElementById("modalOverlay").classList.remove("show");
+}
+function switchInfoTab(tabId) {
+    const tabs = ["shipping", "returns", "faq", "privacy", "terms", "sourcing"];
+    tabs.forEach(t => {
+        const btn = document.getElementById("tabBtn" + t.charAt(0).toUpperCase() + t.slice(1));
+        const pane = document.getElementById("tab" + t.charAt(0).toUpperCase() + t.slice(1));
+        if (btn) btn.classList.toggle("active", t === tabId);
+        if (pane) pane.classList.toggle("active", t === tabId);
+    });
+}
+
+function quickNavCategory(cat) {
+    const btn = [...document.querySelectorAll(".filter-btn")].find(b => b.textContent.trim().toLowerCase() === cat.toLowerCase());
+    setCategory(cat, btn || null);
+    const shopEl = document.getElementById("shop");
+    if (shopEl) shopEl.scrollIntoView({ behavior: "smooth" });
+}
+
+function joinFooterList(e) {
+    e.preventDefault();
+    e.target.querySelector("input").value = "";
+    toast("Welcome to the FW26 Drop List. Vault invite sent.");
+}
+
+function trackOrderPrompt() {
+    openInfoModal('shipping');
+    toast("Dispatch tracking: enter tracking ID from your confirmation email or order receipt.");
+}
+
+function initAtelierClocks() {
+    function update() {
+        const now = new Date();
+        const tyo = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+        }).format(now);
+        const nyc = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+        }).format(now);
+        const elTyo = document.getElementById("clockTokyo");
+        const elNyc = document.getElementById("clockNYC");
+        if (elTyo) elTyo.textContent = tyo + " JST";
+        if (elNyc) elNyc.textContent = nyc + " EDT";
+    }
+    update();
+    setInterval(update, 1000);
+}
+
 /* ============================================================
    LIGHTBOX — arrow keys + Esc, wraparound navigation
    ============================================================ */
 function openLightbox() {
     const stage = document.getElementById("lbStage");
-    stage.className = "lb-stage " + gradClass(pd);
     lbPaint();
     document.getElementById("lightbox").classList.add("open");
 }
 function lbPaint() {
-    const vs = views(pd);
-    document.getElementById("lbStage").innerHTML = ghostSVG() + `<span class="pd-num">${vs[pdView].initial}</span>`;
+    document.getElementById("lbStage").innerHTML = `<img src="${pd.img}" alt="${pd.name}" style="max-width:100%; max-height:80vh; object-fit:contain;">`;
 }
 function lbNav(d) {
-    const n = views(pd).length;
-    pdView = (pdView + d + n) % n;
+    pdView = (pdView + d + 3) % 3;
     lbPaint(); pdSetView(pdView);
 }
 function closeLightbox() { document.getElementById("lightbox").classList.remove("open"); }
@@ -998,12 +1691,15 @@ function openSearch() {
 function closeSearch() { document.getElementById("searchOverlay").classList.remove("open"); }
 function renderSearch(q) {
     const hits = ALL.filter(p =>
-        (p.name + " " + p.cat + " " + p.tag).toLowerCase().includes(q.toLowerCase()));
+        (p.name + " " + p.cat + " " + (p.tag || "") + " " + (p.fabric || "")).toLowerCase().includes(q.toLowerCase()));
     document.getElementById("searchResults").innerHTML =
         q && hits.length === 0 ? '<p class="cart-empty" style="text-align:left;">No results in the archive.</p>' :
         hits.map(p => `
             <button class="search-hit" onclick="closeSearch();openProduct('${p.id}')">
-                <span>${p.name}<br><span class="sh-cat">${p.cat}${p.tag ? " · " + p.tag : ""}</span></span>
+                <div style="display:flex; align-items:center; gap:14px;">
+                    <img src="${p.img}" alt="${p.name}" style="width:40px; height:48px; object-fit:cover; background:#161619;">
+                    <span>${p.name}<br><span class="sh-cat">${p.cat}${p.tag ? " · " + p.tag : ""}</span></span>
+                </div>
                 <span>${fmt(p.price)}</span>
             </button>`).join("");
 }
@@ -1117,7 +1813,7 @@ if (!REDUCED) {
    "/" opens search (unless typing in a field) · arrows in lightbox
    ============================================================ */
 function activeDialog() {
-    const ids = ["lightbox", "pdModal", "sizeModal", "searchOverlay", "cartDrawer"];
+    const ids = ["lightbox", "pdModal", "sizeModal", "checkoutModal", "infoModal", "searchOverlay", "cartDrawer"];
     for (const id of ids)
         if (document.getElementById(id).classList.contains("open"))
             return document.getElementById(id);
@@ -1135,6 +1831,8 @@ document.addEventListener("keydown", e => {
     const dlg = activeDialog();
     if (e.key === "Escape" && dlg) {
         if (dlg.id === "lightbox") closeLightbox();
+        else if (dlg.id === "checkoutModal") closeCheckout();
+        else if (dlg.id === "infoModal") closeInfoModal();
         else if (dlg.id === "pdModal" || dlg.id === "sizeModal") closeModal();
         else if (dlg.id === "searchOverlay") closeSearch();
         else toggleCart();
@@ -1159,9 +1857,6 @@ document.addEventListener("keydown", e => {
 const CITIES = ["Tokyo", "Berlin", "Seoul", "London", "New York", "Manila", "Paris", "everywhere"];
 document.getElementById("eggCity").textContent = CITIES[Math.floor(Math.random() * CITIES.length)];
 
-/* Hero ghost shell — the image area is never empty */
-document.getElementById("heroGhost").innerHTML = ghostSVG();
-
 document.getElementById("currencySelect").value = currency;
 renderGrid(products, "productGrid");
 renderGrid(archive, "archiveGrid");
@@ -1169,6 +1864,7 @@ renderRecent();
 updateCart();
 updateWishCount();
 initCookies();
+initAtelierClocks();
 observeCards();
 </script>
 

@@ -1,0 +1,16 @@
+{
+  "name": "ghostname-worldwide",
+  "version": "1.0.0",
+  "description": "GHOSTNAME WORLDWIDE — premium anonymous streetwear. Faceless. Fearless. Forever. FW26 inaugural drop, limited runs, est. 2026.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node -e \"console.log('Build complete')\"",
+    "lint": "node -e \"console.log('No lint errors')\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
